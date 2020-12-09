@@ -37,6 +37,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-8T-a5q">
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="153.5"/>
                                                         <state key="normal" title="%"/>
+                                                        <connections>
+                                                            <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSb-is-9Mx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hR-TR-uf5">
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="153.5"/>
@@ -169,6 +172,11 @@
                             <constraint firstItem="NVL-IM-6rj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x6h-Z1-xv4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backView" destination="8bC-Xf-vdC" id="QCi-Lm-2Ma"/>
+                        <outlet property="resultLabel" destination="wWj-Er-AT0" id="EfP-4x-hJb"/>
+                        <outletCollection property="allButtons" destination="7MZ-8T-a5q" collectionClass="NSMutableArray" id="R0K-k3-xUf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
