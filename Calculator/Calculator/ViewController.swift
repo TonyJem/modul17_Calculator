@@ -13,5 +13,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+//MARK: - Actions
+    @IBAction func numberButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func dotButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func equalButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func mathActionButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func acButtonTapped(_ sender: UIButton) {
+    }
+   
+    @IBAction func plusMinusButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func percentButtonTapped(_ sender: UIButton) {
+    }
 }
 
