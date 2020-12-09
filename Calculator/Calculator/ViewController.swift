@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - Outlets:
     @IBOutlet var numberButtons: [UIButton]!
     @IBOutlet var mathActionButtons: [UIButton]!
     @IBOutlet weak var dotButton: UIButton!
@@ -10,11 +11,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var percentButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
+//MARK: - StartHere:
     override func viewDidLoad() {
         super.viewDidLoad()
+//MARK: - Methods:
     }
     
-//MARK: - Actions
+    
+    
+//MARK: - Actions:
     @IBAction func numberButtonTapped(_ sender: UIButton) {
     }
     

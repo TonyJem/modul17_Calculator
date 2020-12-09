@@ -228,6 +228,7 @@
                     </view>
                     <connections>
                         <outlet property="acButton" destination="OCM-cr-QVq" id="2UI-6b-9x8"/>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="LZ4-HT-CJr"/>
                         <outlet property="dotButton" destination="dKa-sI-fYb" id="ZOc-aa-8wM"/>
                         <outlet property="percentButton" destination="7MZ-8T-a5q" id="CPj-1O-mtG"/>
                         <outlet property="plusMinusButton" destination="8hR-TR-uf5" id="vQX-x0-EVP"/>
