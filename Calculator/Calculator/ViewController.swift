@@ -11,11 +11,51 @@ class ViewController: UIViewController {
     @IBOutlet weak var percentButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet var backgroundView: UIView!
+    
+    let backgroundColor: UIColor = .black
+    let numberButtonsColor: UIColor = .cyan
+    let mathActionButtonsColor: UIColor = .orange
+    let extraButtonsColor: UIColor = .darkGray
+    
+    var mainButtons: [UIButton] = []
+    var actionButtons: [UIButton] = []
+    var extraButtons: [UIButton] = []
+    
+    var allButtons: [UIButton] = []
+    
+    
 //MARK: - StartHere:
     override func viewDidLoad() {
         super.viewDidLoad()
-//MARK: - Methods:
+        
+        mainButtons.append(dotButton)
+        
+        setupUI()
     }
+    
+//MARK: - Methods:
+    func setupUI(){
+        setupElementsBackgroundColors()
+    }
+    
+    func setupElementsBackgroundColors(){
+        backgroundView.backgroundColor = backgroundColor
+        
+        dotButton.backgroundColor = numberButtonsColor
+        for button in numberButtons {
+            button.backgroundColor = numberButtonsColor
+        }
+        
+        for button in mathActionButtons {
+            button.backgroundColor = mathActionButtonsColor
+        }
+        
+        acButton.backgroundColor = extraButtonsColor
+        plusMinusButton.backgroundColor = extraButtonsColor
+        percentButton.backgroundColor = extraButtonsColor
+    }
+    
     
     
     
