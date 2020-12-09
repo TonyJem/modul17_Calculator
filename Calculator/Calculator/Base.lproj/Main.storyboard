@@ -169,6 +169,28 @@
                             <constraint firstItem="NVL-IM-6rj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x6h-Z1-xv4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acButton" destination="OCM-cr-QVq" id="2UI-6b-9x8"/>
+                        <outlet property="dotButton" destination="dKa-sI-fYb" id="ZOc-aa-8wM"/>
+                        <outlet property="percentButton" destination="7MZ-8T-a5q" id="CPj-1O-mtG"/>
+                        <outlet property="plusMinusButton" destination="8hR-TR-uf5" id="vQX-x0-EVP"/>
+                        <outlet property="resultLabel" destination="wWj-Er-AT0" id="Bby-T6-5vA"/>
+                        <outletCollection property="numberButtons" destination="sjv-Pb-P49" collectionClass="NSMutableArray" id="sMI-Mb-YsC"/>
+                        <outletCollection property="numberButtons" destination="mSl-r3-5aB" collectionClass="NSMutableArray" id="vwK-y3-Cvm"/>
+                        <outletCollection property="numberButtons" destination="2EJ-mP-z1f" collectionClass="NSMutableArray" id="f76-6I-NFl"/>
+                        <outletCollection property="numberButtons" destination="KBO-Iv-ulK" collectionClass="NSMutableArray" id="KsC-Kh-RjN"/>
+                        <outletCollection property="numberButtons" destination="6yB-rC-s4y" collectionClass="NSMutableArray" id="H7Z-YJ-76s"/>
+                        <outletCollection property="numberButtons" destination="brU-Eg-tKS" collectionClass="NSMutableArray" id="v4J-Wi-8gS"/>
+                        <outletCollection property="numberButtons" destination="Rqm-yl-mGz" collectionClass="NSMutableArray" id="M59-5R-gyf"/>
+                        <outletCollection property="numberButtons" destination="RPP-CW-Xs6" collectionClass="NSMutableArray" id="Dna-9d-e2K"/>
+                        <outletCollection property="numberButtons" destination="zad-rz-xuT" collectionClass="NSMutableArray" id="pLQ-jP-YuR"/>
+                        <outletCollection property="numberButtons" destination="3uV-EA-FH9" collectionClass="NSMutableArray" id="fQ9-05-d09"/>
+                        <outletCollection property="mathActionButtons" destination="z7Z-Qz-Lrf" collectionClass="NSMutableArray" id="hp5-e3-BRF"/>
+                        <outletCollection property="mathActionButtons" destination="TB1-CC-crg" collectionClass="NSMutableArray" id="9ZW-av-4V5"/>
+                        <outletCollection property="mathActionButtons" destination="Qze-cZ-Rmh" collectionClass="NSMutableArray" id="Yc1-Jd-w8X"/>
+                        <outletCollection property="mathActionButtons" destination="WmF-5s-hYM" collectionClass="NSMutableArray" id="n7P-1B-6kK"/>
+                        <outletCollection property="mathActionButtons" destination="iwQ-Va-Swd" collectionClass="NSMutableArray" id="1ma-9f-2HL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
