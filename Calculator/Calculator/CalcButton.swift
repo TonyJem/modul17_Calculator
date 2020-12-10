@@ -12,7 +12,7 @@ enum ButtonColorScheme {
         case .primaryButton:
             return .cyan
         case .secondaryButton:
-            return .darkGray
+            return .lightGray
         }
     }
 }

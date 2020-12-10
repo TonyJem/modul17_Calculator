@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private let fontSize: CGFloat = 32
     
     private let buttonBorderWidth: CGFloat = 1.2
-    private let buttonBorderColor = UIColor(red: 0.5, green: 0.5, blue:0, alpha: 1.0)
+    private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     private let buttonBorderCornerRadius: CGFloat = 20
     
     private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
