@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     private let fontColor: UIColor = .blue
     private let fontSize: CGFloat = 32
     
+    private let buttonBorderWidth: CGFloat = 1.2
+    private let buttonBorderColor = UIColor(red: 0.5, green: 0.5, blue:0, alpha: 1.0)
+    
     private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     private let allActionButtonTags = [11, 12, 13, 14, 15]
     private let allSecondaryButtonTags = [16, 17, 18]
@@ -39,6 +42,8 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: fontSize)
         button.setTitleColor(fontColor, for: .normal)
         
+        setupButtonBorders(for: button)
+        
         if allPrimaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
@@ -50,6 +55,11 @@ class ViewController: UIViewController {
         if allSecondaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
         }
+    }
+    
+    private func setupButtonBorders(for button: CalcButton){
+        button.layer.borderWidth = buttonBorderWidth
+        button.layer.borderColor = buttonBorderColor.cgColor
     }
     
     // MARK: Actions:
