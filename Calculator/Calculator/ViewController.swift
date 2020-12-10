@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     private let labelFontSize: CGFloat = 70
     
     private let buttonFontColor: UIColor = .blue
-    private let buttonFontSize: CGFloat = 32
+    private let buttonFontSize: CGFloat = 42
     
-    private let buttonBorderWidth: CGFloat = 1.2
+    private let buttonBorderWidth: CGFloat = 3
     private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     private let buttonBorderCornerRadius: CGFloat = 20
     
