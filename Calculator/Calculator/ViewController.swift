@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private let buttonBorderWidth: CGFloat = 1.2
     private let buttonBorderColor = UIColor(red: 0.5, green: 0.5, blue:0, alpha: 1.0)
+    private let buttonBorderCornerRadius: CGFloat = 20
     
     private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     private let allActionButtonTags = [11, 12, 13, 14, 15]
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
     private func setupButtonBorders(for button: CalcButton){
         button.layer.borderWidth = buttonBorderWidth
         button.layer.borderColor = buttonBorderColor.cgColor
+        button.layer.cornerRadius = buttonBorderCornerRadius
     }
     
     // MARK: Actions:
