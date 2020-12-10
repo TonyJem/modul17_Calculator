@@ -4,14 +4,9 @@ enum ButtonColorScheme {
     case actionButton
     case primaryButton
     case secondaryButton
-}
-
-class CalcButton: UIButton {
-    var title: String = ""
-    var colorScheme: ButtonColorScheme = .primaryButton
     
-    private var buttonBackgroundColor: UIColor{
-        switch colorScheme {
+    var buttonBackgroundColor: UIColor{
+        switch self {
         case .actionButton:
             return .orange
         case .primaryButton:
@@ -20,8 +15,13 @@ class CalcButton: UIButton {
             return .darkGray
         }
     }
+}
+
+class CalcButton: UIButton {
+    var title: String = ""
+    var colorScheme: ButtonColorScheme = .primaryButton
     
     required init?(coder aDecoder: NSCoder) {
-         super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
 }
