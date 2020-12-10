@@ -9,8 +9,12 @@ class ViewController: UIViewController {
     
     // MARK: Properties:
     private let appBackgroundColor: UIColor = .black
-    private let fontColor: UIColor = .blue
-    private let fontSize: CGFloat = 32
+    
+    private let labelFontColor: UIColor = .white
+    private let labelFontSize: CGFloat = 70
+    
+    private let buttonFontColor: UIColor = .blue
+    private let buttonFontSize: CGFloat = 32
     
     private let buttonBorderWidth: CGFloat = 1.2
     private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
@@ -33,15 +37,15 @@ class ViewController: UIViewController {
     // MARK: Methods:
     private func setupUI() {
         backView.backgroundColor = appBackgroundColor
-        
+        setupResultLabelUI()
         for button in allButtons {
             setupButtonUI(for: button)
         }
     }
     
     private func setupButtonUI(for button: CalcButton) {
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: fontSize)
-        button.setTitleColor(fontColor, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: buttonFontSize)
+        button.setTitleColor(buttonFontColor, for: .normal)
         
         setupButtonBorders(for: button)
         
@@ -62,6 +66,11 @@ class ViewController: UIViewController {
         button.layer.borderWidth = buttonBorderWidth
         button.layer.borderColor = buttonBorderColor.cgColor
         button.layer.cornerRadius = buttonBorderCornerRadius
+    }
+    
+    private func setupResultLabelUI(){
+        resultLabel.textColor = labelFontColor
+        resultLabel.font = UIFont.boldSystemFont(ofSize: labelFontSize)
     }
     
     // MARK: Actions:
