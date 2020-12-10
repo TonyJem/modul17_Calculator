@@ -31,21 +31,25 @@ class ViewController: UIViewController {
         backView.backgroundColor = appBackgroundColor
         
         for button in allButtons {
-            if allPrimaryButtonTags.contains(button.tag) {
-                button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
-            }
-            
-            if allActionButtonTags.contains(button.tag) {
-                button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
-            }
-            
-            if allSecondaryButtonTags.contains(button.tag) {
-                button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
-            }
+            setupButtonUI(for: button)
+        }
+    }
+    
+    private func setupButtonUI(for button: CalcButton) {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: fontSize)
         button.setTitleColor(fontColor, for: .normal)
+        
+        if allPrimaryButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
         
+        if allActionButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
+        }
+        
+        if allSecondaryButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
+        }
     }
     
     // MARK: Actions:
