@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     // MARK: Outlets:
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet var allButtons: [UIButton]!
+    @IBOutlet var allButtons: [CalcButton]!
     
     // MARK: Properties:
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     // MARK: Methods:
     
     // MARK: Actions:
-    @IBAction func someButtonTapped(_ sender: UIButton) {
+    @IBAction func someButtonTapped(_ sender: CalcButton) {
     }
 }
 
