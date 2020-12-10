@@ -1,17 +1,27 @@
 import UIKit
 
+enum ButtonColorScheme {
+    case actionButton
+    case primaryButton
+    case secondaryButton
+}
+
 class CalcButton: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var title: String = ""
+    var colorScheme: ButtonColorScheme = .primaryButton
+    
+    private var buttonBackgroundColor: UIColor{
+        switch colorScheme {
+        case .actionButton:
+            return .orange
+        case .primaryButton:
+            return .cyan
+        case .secondaryButton:
+            return .darkGray
+        }
     }
-    */
-
     
-    
-    
-    
+    required init?(coder aDecoder: NSCoder) {
+         super.init(coder: aDecoder)
+    }
 }
