@@ -2,83 +2,59 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //MARK: - Outlets:
-    @IBOutlet var numberButtons: [UIButton]!
-    @IBOutlet var mathActionButtons: [UIButton]!
-    @IBOutlet weak var dotButton: UIButton!
-    @IBOutlet weak var acButton: UIButton!
-    @IBOutlet weak var plusMinusButton: UIButton!
-    @IBOutlet weak var percentButton: UIButton!
+    // MARK: Outlets:
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet var allButtons: [CalcButton]!
     
-    @IBOutlet var backgroundView: UIView!
+    // MARK: Properties:
+    private let appBackgroundColor: UIColor = .black
+    private let fontColor: UIColor = .blue
+    private let fontSize: CGFloat = 32
     
-    let backgroundColor: UIColor = .black
-    let numberButtonsColor: UIColor = .cyan
-    let mathActionButtonsColor: UIColor = .orange
-    let extraButtonsColor: UIColor = .darkGray
+    private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    private let allActionButtonTags = [11, 12, 13, 14, 15]
+    private let allSecondaryButtonTags = [16, 17, 18]
     
-    var mainButtons: [UIButton] = []
-    var actionButtons: [UIButton] = []
-    var extraButtons: [UIButton] = []
+    private let colorSchemeForPrimaryButtons: ButtonColorScheme = .primaryButton
+    private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
+    private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
-    var allButtons: [UIButton] = []
-    
-    
-//MARK: - StartHere:
+    // MARK: Starting Here:
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mainButtons.append(dotButton)
-        
         setupUI()
     }
     
-//MARK: - Methods:
-    func setupUI(){
-        setupElementsBackgroundColors()
+    // MARK: Methods:
+    private func setupUI() {
+        backView.backgroundColor = appBackgroundColor
+        
+        for button in allButtons {
+            setupButtonUI(for: button)
+        }
     }
     
-    func setupElementsBackgroundColors(){
-        backgroundView.backgroundColor = backgroundColor
+    private func setupButtonUI(for button: CalcButton) {
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: fontSize)
+        button.setTitleColor(fontColor, for: .normal)
         
-        dotButton.backgroundColor = numberButtonsColor
-        for button in numberButtons {
-            button.backgroundColor = numberButtonsColor
+        if allPrimaryButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
         
-        for button in mathActionButtons {
-            button.backgroundColor = mathActionButtonsColor
+        if allActionButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
         }
         
-        acButton.backgroundColor = extraButtonsColor
-        plusMinusButton.backgroundColor = extraButtonsColor
-        percentButton.backgroundColor = extraButtonsColor
+        if allSecondaryButtonTags.contains(button.tag) {
+            button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
+        }
+    }
+    
+    // MARK: Actions:
+    @IBAction func someButtonTapped(_ sender: CalcButton) {
     }
     
     
-    
-    
-//MARK: - Actions:
-    @IBAction func numberButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func dotButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func equalButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func mathActionButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func acButtonTapped(_ sender: UIButton) {
-    }
-   
-    @IBAction func plusMinusButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func percentButtonTapped(_ sender: UIButton) {
-    }
 }
-
