@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     private let appBackgroundColor: UIColor = .black
     
     private let labelFontColor: UIColor = .white
-    private let labelFontSize: CGFloat = 70
+    private let labelFontSize: CGFloat = 65
     
     private let buttonFontColor: UIColor = .blue
     private let buttonFontSize: CGFloat = 42
