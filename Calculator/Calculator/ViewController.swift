@@ -105,5 +105,36 @@ class ViewController: UIViewController {
     @IBAction func someButtonTapped(_ sender: CalcButton) {
         sender.animateWithPulsate()
         sender.animateWithFlash()
+        
+        switch sender.tag {
+        case 11:
+            resultLabel.text = "0"
+        case 12:
+            return
+        case 13:
+            return
+        case 14:
+            return
+        case 21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53:
+            if let text = resultLabel.text {
+                guard text != "0" else {
+                    resultLabel.text = sender.currentTitle
+                    return
+                }
+                resultLabel.text = text + sender.currentTitle!
+            } else {
+                return
+            }
+        case 24:
+            return
+        case 34:
+            return
+        case 44:
+            return
+        case 54:
+            return
+        default:
+            break
+        }
     }
 }
