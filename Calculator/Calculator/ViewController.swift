@@ -1,7 +1,7 @@
 import UIKit
 
 // TODO -1. Label can contain max: "999 999 999", if number is bigger it has to be turned into "7.901235e29" and operate with it. If anything wrong, just frop error to screen, that possible to delete with AC. As bigger number as smaller Fonts size comes <- need to do it flexible
- 
+
 class ViewController: UIViewController {
     
     // MARK: Outlets:
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         button.setTitleColor(buttonFontColor, for: .normal)
         
         setupButtonBorders(for: button)
-
+        
         if allPrimaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
@@ -85,11 +85,11 @@ class ViewController: UIViewController {
         if button.tag == 51 {
             button.setTitle("\u{207A}\u{2215}\u{208B}", for: .normal)
         }
-
+        
         if allActionButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
         }
-
+        
         if allSecondaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
         }
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
                 return
             }
             currentTextInResultLabel += sender.currentTitle ?? ""
-                
+            
         case 24:
             return
         case 34:
