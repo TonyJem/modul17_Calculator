@@ -48,15 +48,15 @@ class ViewController: UIViewController {
         button.setTitleColor(buttonFontColor, for: .normal)
         
         setupButtonBorders(for: button)
-        
+
         if allPrimaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
-        
+
         if allActionButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
         }
-        
+
         if allSecondaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForSecondaryButtons.buttonBackgroundColor
         }
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     
     // MARK: Actions:
     @IBAction func someButtonTapped(_ sender: CalcButton) {
+        sender.animateWithPulsate()
+        sender.animateWithFlash()
     }
-    
-    
 }
