@@ -30,6 +30,12 @@ class ViewController: UIViewController {
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
+    private var currentTextInResultLabel = "0" {
+        didSet {
+            setupResultLabelUI()
+        }
+    }
+    
     // MARK: Starting Here:
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,8 +103,8 @@ class ViewController: UIViewController {
     
     private func setupResultLabelUI(){
         resultLabel.textColor = labelFontColor
-//        resultLabel.font = UIFont.boldSystemFont(ofSize: labelFontSize)
         resultLabel.font = UIFont.systemFont(ofSize: labelFontSize)
+        resultLabel.text = currentTextInResultLabel
     }
     
     // MARK: Actions:
@@ -108,28 +114,29 @@ class ViewController: UIViewController {
         
         switch sender.tag {
         case 11:
-            resultLabel.text = "0"
+            currentTextInResultLabel = "0"
         case 12:
             return
         case 13:
             return
         case 14:
             return
-        case 21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53:
-            if let text = resultLabel.text {
-                guard text != "0" else {
-                    resultLabel.text = sender.currentTitle
-                    return
-                }
-                resultLabel.text = text + sender.currentTitle!
-            } else {
+        case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
+            guard currentTextInResultLabel != "0" else {
+                currentTextInResultLabel = sender.currentTitle ?? ""
                 return
             }
+            currentTextInResultLabel += sender.currentTitle ?? ""
+                
         case 24:
             return
         case 34:
             return
         case 44:
+            return
+        case 51:
+            return
+        case 53:
             return
         case 54:
             return
