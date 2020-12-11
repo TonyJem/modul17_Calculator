@@ -113,6 +113,7 @@ class ViewController: UIViewController {
         sender.animateWithFlash()
         
         switch sender.tag {
+        // AC button:
         case 11:
             currentTextInResultLabel = "0"
         case 12:
@@ -121,6 +122,8 @@ class ViewController: UIViewController {
             return
         case 14:
             return
+            
+        // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
             guard currentTextInResultLabel != "0" else {
                 currentTextInResultLabel = sender.currentTitle ?? ""
@@ -134,6 +137,8 @@ class ViewController: UIViewController {
             return
         case 44:
             return
+            
+        // PlusMinus button:
         case 51:
             guard currentTextInResultLabel != "0" else { return }
             
