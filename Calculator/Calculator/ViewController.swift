@@ -54,8 +54,8 @@ class ViewController: UIViewController {
         }
         
         // "Square Root" Button:
-        if button.tag == 19 {
-            button.setTitle("\u{221A}", for: .normal)
+        if button.tag == 17 {
+            button.setTitle("\u{221A}x", for: .normal)
         }
         
         // "Devision" Button:
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         }
         
         // "PlusMinus" Button:
-        if button.tag == 17 {
+        if button.tag == 19 {
             button.setTitle("\u{207A}\u{2215}\u{208B}", for: .normal)
         }
         

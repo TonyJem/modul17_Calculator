@@ -36,21 +36,21 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-8T-a5q" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="138.5"/>
-                                                        <state key="normal" title="%"/>
+                                                        <state key="normal" title="AC"/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CD3-px-Cdo"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hR-TR-uf5" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="103" y="0.0" width="97.5" height="138.5"/>
-                                                        <state key="normal" title="+/-"/>
+                                                        <state key="normal" title="Sqr(x)"/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAy-Vr-Qyq"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-cr-QVq" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="205.5" y="0.0" width="98" height="138.5"/>
-                                                        <state key="normal" title="AC"/>
+                                                        <state key="normal" title="%"/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAM-Z6-U7U"/>
                                                         </connections>
@@ -168,7 +168,7 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-Pb-P49" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="138.5"/>
-                                                        <state key="normal" title="Sqr(x)"/>
+                                                        <state key="normal" title="+/-"/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUL-HE-qvM"/>
                                                         </connections>
