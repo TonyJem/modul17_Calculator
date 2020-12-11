@@ -1,5 +1,7 @@
 import UIKit
 
+// TODO -1. Label can contain max: "999 999 999", if number is bigger it has to be turned into "7.901235e29" and operate with it. If anything wrong, just frop error to screen, that possible to delete with AC
+ 
 class ViewController: UIViewController {
     
     // MARK: Outlets:
