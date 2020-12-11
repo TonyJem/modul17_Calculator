@@ -147,9 +147,12 @@ class ViewController: UIViewController {
                 return
             }
             currentTextInResultLabel = "\u{2212}" + currentTextInResultLabel
-            
+        
+        // Comma button:
         case 53:
-            return
+            guard !currentTextInResultLabel.contains(sender.currentTitle!) else { return }
+            currentTextInResultLabel += sender.currentTitle ?? ""
+            
         case 54:
             return
         default:
