@@ -182,7 +182,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-sI-fYb" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="205.5" y="0.0" width="98" height="138.5"/>
-                                                        <state key="normal" title="."/>
+                                                        <state key="normal" title=","/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wag-hH-ReY"/>
                                                         </connections>
