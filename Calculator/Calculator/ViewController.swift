@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         }
         
         // "Minus" Button:
-        if button.tag == 33 {
+        if button.tag == 34 {
             button.setTitle("\u{2212}", for: .normal)
         }
         
