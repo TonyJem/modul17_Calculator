@@ -135,7 +135,14 @@ class ViewController: UIViewController {
         case 44:
             return
         case 51:
-            return
+            guard currentTextInResultLabel != "0" else { return }
+            
+            guard currentTextInResultLabel.first != "\u{2212}" else {
+                currentTextInResultLabel.removeFirst()
+                return
+            }
+            currentTextInResultLabel = "\u{2212}" + currentTextInResultLabel
+            
         case 53:
             return
         case 54:
