@@ -97,7 +97,8 @@ class ViewController: UIViewController {
     
     private func setupResultLabelUI(){
         resultLabel.textColor = labelFontColor
-        resultLabel.font = UIFont.boldSystemFont(ofSize: labelFontSize)
+//        resultLabel.font = UIFont.boldSystemFont(ofSize: labelFontSize)
+        resultLabel.font = UIFont.systemFont(ofSize: labelFontSize)
     }
     
     // MARK: Actions:
