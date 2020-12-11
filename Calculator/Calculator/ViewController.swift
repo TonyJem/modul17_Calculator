@@ -52,6 +52,31 @@ class ViewController: UIViewController {
         if allPrimaryButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForPrimaryButtons.buttonBackgroundColor
         }
+        
+        // "Square Root" Button:
+        if button.tag == 19 {
+            button.setTitle("\u{221A}", for: .normal)
+        }
+        
+        // "Devision" Button:
+        if button.tag == 15 {
+            button.setTitle("\u{00F7}", for: .normal)
+        }
+        
+        // "Multiplication" Button:
+        if button.tag == 14 {
+            button.setTitle("\u{00D7}", for: .normal)
+        }
+        
+        // "PlusMinus" Button:
+        if button.tag == 17 {
+            button.setTitle("\u{207A}\u{2215}\u{208B}", for: .normal)
+        }
+        
+        // "Minus" Button:
+        if button.tag == 13 {
+            button.setTitle("\u{2212}", for: .normal)
+        }
 
         if allActionButtonTags.contains(button.tag) {
             button.backgroundColor = colorSchemeForActionButtons.buttonBackgroundColor
