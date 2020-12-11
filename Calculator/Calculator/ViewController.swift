@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     private let buttonBorderCornerRadius: CGFloat = 20
     
-    private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 19]
     private let allActionButtonTags = [11, 12, 13, 14, 15]
     private let allSecondaryButtonTags = [16, 17, 18]
     
