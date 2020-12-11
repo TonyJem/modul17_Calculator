@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     private let buttonBorderCornerRadius: CGFloat = 20
     
-    private let allPrimaryButtonTags = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 19]
-    private let allActionButtonTags = [11, 12, 13, 14, 15]
-    private let allSecondaryButtonTags = [16, 17, 18]
+    private let allPrimaryButtonTags = [21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53]
+    private let allActionButtonTags = [14, 24, 34, 44, 54]
+    private let allSecondaryButtonTags = [11, 12, 13]
     
     private let colorSchemeForPrimaryButtons: ButtonColorScheme = .primaryButton
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
@@ -56,28 +56,28 @@ class ViewController: UIViewController {
         }
         
         // "Square Root" Button:
-        if button.tag == 17 {
+        if button.tag == 12 {
             button.setTitle("\u{221A}x", for: .normal)
         }
         
         // "Devision" Button:
-        if button.tag == 15 {
+        if button.tag == 14 {
             button.setTitle("\u{00F7}", for: .normal)
         }
         
         // "Multiplication" Button:
-        if button.tag == 14 {
+        if button.tag == 24 {
             button.setTitle("\u{00D7}", for: .normal)
         }
         
-        // "PlusMinus" Button:
-        if button.tag == 19 {
-            button.setTitle("\u{207A}\u{2215}\u{208B}", for: .normal)
+        // "Minus" Button:
+        if button.tag == 33 {
+            button.setTitle("\u{2212}", for: .normal)
         }
         
-        // "Minus" Button:
-        if button.tag == 13 {
-            button.setTitle("\u{2212}", for: .normal)
+        // "PlusMinus" Button:
+        if button.tag == 51 {
+            button.setTitle("\u{207A}\u{2215}\u{208B}", for: .normal)
         }
 
         if allActionButtonTags.contains(button.tag) {
