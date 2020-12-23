@@ -30,6 +30,10 @@ class ViewController: UIViewController {
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
+    private var operation: Operation? = nil
+    private var operand1: Double = 0
+    private var operand2: Double?
+    
     private var currentTextInResultLabel = "0" {
         didSet {
             setupResultLabelUI()
