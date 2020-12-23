@@ -116,13 +116,19 @@ class ViewController: UIViewController {
         // AC button:
         case 11:
             currentTextInResultLabel = "0"
+        
+        // squareRoot button:
         case 12:
             return
+        
+        // percentage button:
         case 13:
             return
+        
+        // divide button:
         case 14:
             return
-            
+                        
         // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
             guard currentTextInResultLabel != "0" else {
@@ -130,11 +136,16 @@ class ViewController: UIViewController {
                 return
             }
             currentTextInResultLabel += sender.currentTitle ?? ""
-            
+        
+        // multiply button:
         case 24:
             return
+            
+        // minus button:
         case 34:
             return
+            
+        // plus button:
         case 44:
             return
             
@@ -152,9 +163,11 @@ class ViewController: UIViewController {
         case 53:
             guard !currentTextInResultLabel.contains(sender.currentTitle!) else { return }
             currentTextInResultLabel += sender.currentTitle ?? ""
-            
+         
+        // Result button:
         case 54:
             return
+            
         default:
             break
         }
