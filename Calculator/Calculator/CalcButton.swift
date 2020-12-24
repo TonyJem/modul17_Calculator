@@ -16,7 +16,7 @@ enum ButtonColorScheme {
 }
 
 class CalcButton: UIButton {
-    var title: String = ""
+    var titleToShow: String = "TTT"
     var colorScheme: ButtonColorScheme = .primaryButton
     
     required init?(coder aDecoder: NSCoder) {

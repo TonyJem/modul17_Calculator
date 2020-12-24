@@ -28,6 +28,12 @@ class MainViewController: UIViewController {
         }
     }
     
+        createTitlesForButtons()
+    private func createTitlesForButtons(){
+        for button in allButtons {
+            button.setTitle(button.titleToShow, for: .normal)
+        }   
+    }
     private func resultOfOperation(operation: BasicMathOperation,
                                    _ number1: Double,
                                    and number2: Double) -> Double {
