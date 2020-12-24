@@ -11,10 +11,6 @@ class ViewController: UIViewController {
     
     // MARK: Properties:
     private let labelFontSize: CGFloat = 65
-    private let buttonFontSize: CGFloat = 42
-    
-    private let buttonBorderWidth: CGFloat = 3
-    private let buttonBorderCornerRadius: CGFloat = 20
     
     private let allPrimaryButtonTags = [21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53]
     private let allActionButtonTags = [14, 24, 34, 44, 54]
@@ -84,7 +80,7 @@ class ViewController: UIViewController {
     }
     
     private func setupAllButtonsUI(for button: CalcButton) {
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: buttonFontSize)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: CalcButtonDTO.primaryButton.fontSize)
         button.setTitleColor(Colors.buttonFontColor, for: .normal)
         
         setupButtonBorders(for: button)
@@ -128,9 +124,9 @@ class ViewController: UIViewController {
     }
     
     private func setupButtonBorders(for button: CalcButton){
-        button.layer.borderWidth = buttonBorderWidth
-        button.layer.borderColor = Colors.buttonBorderColor.cgColor
-        button.layer.cornerRadius = buttonBorderCornerRadius
+        button.layer.borderWidth = CalcButtonDTO.primaryButton.borderWidth
+        button.layer.borderColor = CalcButtonDTO.primaryButton.borderColor.cgColor
+        button.layer.cornerRadius = CalcButtonDTO.primaryButton.cornerRadius
     }
     
     private func setupResultLabelUI(){
