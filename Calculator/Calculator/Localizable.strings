@@ -1,1 +1,27 @@
+//MARK: Numeric
+"number_0_button_title" = "0";
+"number_1_button_title" = "1";
+"number_2_button_title" = "2";
+"number_3_button_title" = "3";
+"number_4_button_title" = "4";
+"number_5_button_title" = "5";
+"number_6_button_title" = "6";
+"number_7_button_title" = "7";
+"number_8_button_title" = "8";
+"number_9_button_title" = "9";
 
+//MARK: Basic Math Operations
+"addition_button_title" = "+";
+"subtraction_button_title" = "\u{2212}";
+"multiplication_button_title" = "\u{00D7}";
+"division_button_title" = "\u{00F7}";
+
+//MARK: Advanced Math Operations
+"square_root_button_title" = "\u{221A}";
+"percent_button_title" = "%";
+
+//MARK: Other and Service Buttons
+"reset_button_title" = "AC";
+"equals_button_title" = "=";
+"decimal_point_button_title" = ".";
+"plus_minus_button_title" = "\u{207A}\u{2215}\u{208B}";
