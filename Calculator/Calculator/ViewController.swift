@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     // MARK: Properties:
     private let appBackgroundColor: UIColor = .black
     
-    private let labelFontColor: UIColor = .white
+    private let labelFontColorNormal: UIColor = .white
+    private let labelFontColorFrozen: UIColor = .gray
     private let labelFontSize: CGFloat = 65
     
     private let buttonFontColor: UIColor = .blue
@@ -27,7 +28,8 @@ class ViewController: UIViewController {
     private let allSecondaryButtonTags = [11, 12, 13]
     
     private let colorSchemeForPrimaryButtons: ButtonColorScheme = .primaryButton
-    private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
+    private let colorSchemeForActionButtons: ButtonColorScheme = .actionButtonNormal
+    private let colorSchemeForActionButtonsFrozen: ButtonColorScheme = .actionButtonFrozen
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
     private var currentOperation: Operation? = nil
@@ -61,14 +63,16 @@ class ViewController: UIViewController {
     private func operationButtonPressed(for pressedOperation: Operation) {
         guard currentOperation != nil else {
             operand1 = Double(currentTextInResultLabel) ?? 0
-            currentTextInResultLabel = "0"
+//            TODO: Refactor below next doubled code's rows:
+            resultLabel.textColor = labelFontColorFrozen
             currentOperation = pressedOperation
             return
         }
         operand2 = Double(currentTextInResultLabel) ?? 0
         let result = resultOfOperation(operation: currentOperation!, operand1, and: operand2)
         operand1 = result
-        currentTextInResultLabel = "0"
+        resultLabel.text = String(result)
+        resultLabel.textColor = labelFontColorFrozen
         currentOperation = pressedOperation
     }
     
@@ -138,15 +142,13 @@ class ViewController: UIViewController {
     }
     
     private func setupResultLabelUI(){
-        resultLabel.textColor = labelFontColor
+        resultLabel.textColor = labelFontColorNormal
         resultLabel.font = UIFont.systemFont(ofSize: labelFontSize)
         resultLabel.text = currentTextInResultLabel
     }
     
     // MARK: Actions:
     @IBAction func someButtonTapped(_ sender: CalcButton) {
-        sender.animateWithPulsate()
-        sender.animateWithFlash()
         
         switch sender.tag {
         // AC button:
@@ -155,6 +157,10 @@ class ViewController: UIViewController {
             currentOperation = nil
             operand1 = 0
             operand2 = 0
+            for button in allButtons {
+                setupAllButtonsUI(for: button)
+                button.isUserInteractionEnabled = true
+            }
         
         // squareRoot button:
         case 12:
@@ -170,6 +176,14 @@ class ViewController: UIViewController {
                         
         // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
+            
+            guard resultLabel.textColor != labelFontColorFrozen else {
+                resultLabel.textColor = labelFontColorNormal
+                currentTextInResultLabel = ""
+                currentTextInResultLabel += sender.currentTitle ?? ""
+                return
+            }
+            
             guard currentTextInResultLabel != "0" else {
                 currentTextInResultLabel = sender.currentTitle ?? ""
                 return
@@ -186,6 +200,11 @@ class ViewController: UIViewController {
             
         // plus button:
         case 44:
+            guard sender.backgroundColor != .green else { return }
+            sender.isUserInteractionEnabled = false
+            sender.animateWithPulsate()
+            sender.animateWithFlash()
+            sender.backgroundColor = .green
             operationButtonPressed(for: .plus)
             
         // PlusMinus button:
@@ -212,7 +231,9 @@ class ViewController: UIViewController {
             operand2 = Double(currentTextInResultLabel) ?? 0
             let result = resultOfOperation(operation: currentOperation!, operand1, and: operand2)
             operand1 = result
-            currentTextInResultLabel = String(result)
+            
+            resultLabel.text = String(result)
+            resultLabel.textColor = labelFontColorFrozen
             currentOperation = nil
             
         default:
