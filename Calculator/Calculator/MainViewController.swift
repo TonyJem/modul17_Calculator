@@ -5,7 +5,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     // MARK: Outlets:
-    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet var allButtons: [CalcButton]!
     
@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
     
     // MARK: Methods:
     private func setupUI() {
-        backView.backgroundColor = Colors.applicationBackgroundColor
+        backgroundView.backgroundColor = Colors.applicationBackgroundColor
         setupResultLabelUI()
         for button in allButtons {
             setupAllButtonsUI(for: button)

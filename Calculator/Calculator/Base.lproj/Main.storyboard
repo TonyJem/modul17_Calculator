@@ -249,7 +249,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backView" destination="8bC-Xf-vdC" id="QCi-Lm-2Ma"/>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="QCi-Lm-2Ma"/>
                         <outlet property="resultLabel" destination="wWj-Er-AT0" id="EfP-4x-hJb"/>
                         <outletCollection property="allButtons" destination="sjv-Pb-P49" collectionClass="NSMutableArray" id="mwv-jc-On8"/>
                         <outletCollection property="allButtons" destination="dKa-sI-fYb" collectionClass="NSMutableArray" id="OKw-Xe-0df"/>
