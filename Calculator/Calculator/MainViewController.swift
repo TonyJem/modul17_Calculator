@@ -27,7 +27,6 @@ class MainViewController: UIViewController {
     
     // MARK: Actions:
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
-        
     }
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
