@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButtonNormal
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
-    private var currentOperation: Operation? = nil
+    private var currentOperation: BasicMathOperation? = nil
     private var operand1: Double = 0
     private var operand2: Double = 0
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func resultOfOperation(operation: Operation,
+    private func resultOfOperation(operation: BasicMathOperation,
                                    _ number1: Double,
                                    and number2: Double) -> Double {
         switch operation {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func operationButtonPressed(for pressedOperation: Operation) {
+    private func operationButtonPressed(for pressedOperation: BasicMathOperation) {
         guard currentOperation != nil else {
             operand1 = Double(currentTextInResultLabel) ?? 0
 //            TODO: Refactor below next doubled code's rows:

@@ -1,4 +1,4 @@
-    enum Operation {
+    enum BasicMathOperation {
         case plus
         case minus
         case divide
