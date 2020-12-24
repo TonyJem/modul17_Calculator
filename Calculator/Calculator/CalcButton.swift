@@ -2,7 +2,6 @@ import UIKit
 
 enum ButtonColorScheme {
     case actionButtonNormal
-    case actionButtonFrozen
     case primaryButton
     case secondaryButton
     
@@ -11,8 +10,6 @@ enum ButtonColorScheme {
         case .actionButtonNormal:
             return .orange
 
-        case .actionButtonFrozen:
-            return .green
             
         case .primaryButton:
             return .cyan
