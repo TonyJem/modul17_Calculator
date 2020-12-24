@@ -49,11 +49,4 @@ class CalcButton: UIButton {
         flash.repeatCount = 1
         layer.add(flash, forKey: nil)
     }
-    
-    override func setTitle(_ title: String?, for state: UIControl.State) {
-        UIView.performWithoutAnimation {
-            super.setTitle(title, for: state)
-            super.layoutIfNeeded()
-        }
-    }
 }
