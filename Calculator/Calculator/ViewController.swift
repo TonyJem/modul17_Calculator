@@ -83,11 +83,11 @@ class ViewController: UIViewController {
         backView.backgroundColor = appBackgroundColor
         setupResultLabelUI()
         for button in allButtons {
-            setupButtonUI(for: button)
+            setupAllButtonsUI(for: button)
         }
     }
     
-    private func setupButtonUI(for button: CalcButton) {
+    private func setupAllButtonsUI(for button: CalcButton) {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: buttonFontSize)
         button.setTitleColor(buttonFontColor, for: .normal)
         
