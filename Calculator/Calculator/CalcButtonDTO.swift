@@ -17,7 +17,7 @@ struct CalcButtonDTO {
         return CalcButtonDTO()
     }
     
-    init(fontSize: CGFloat = 12,
+    init(fontSize: CGFloat = 42,
          fontColor: UIColor = Colors.buttonFontColor,
 //         fontWeight: UIFont.Weight,
          backgroundColor: UIColor = Colors.primaryButton,
