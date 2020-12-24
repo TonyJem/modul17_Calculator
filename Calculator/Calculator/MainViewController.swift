@@ -28,12 +28,21 @@ class MainViewController: UIViewController {
         }
     }
     
+    // MARK: viewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         createTitlesForButtons()
+        setupUI()
+    }
+    
+    // MARK: Methods:
     private func createTitlesForButtons(){
         for button in allButtons {
             button.setTitle(button.titleToShow, for: .normal)
         }   
     }
+    
     private func resultOfOperation(operation: BasicMathOperation,
                                    _ number1: Double,
                                    and number2: Double) -> Double {
@@ -65,13 +74,6 @@ class MainViewController: UIViewController {
         currentOperation = pressedOperation
     }
     
-    // MARK: Starting Here:
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
-    
-    // MARK: Methods:
     private func setupUI() {
         backgroundView.backgroundColor = Colors.applicationBackgroundColor
         setupResultLabelUI()
