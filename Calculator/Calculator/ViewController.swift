@@ -30,14 +30,46 @@ class ViewController: UIViewController {
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButton
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
-    private var operation: Operation? = nil
+    private var currentOperation: Operation? = nil
     private var operand1: Double = 0
-    private var operand2: Double?
+    private var operand2: Double = 0
     
     private var currentTextInResultLabel = "0" {
         didSet {
             setupResultLabelUI()
         }
+    }
+    
+    private func resultOfOperation(operation: Operation,
+                                   _ number1: Double,
+                                   and number2: Double) -> Double {
+        switch operation {
+        case .plus:
+            return number1 + number2
+            
+        case .minus:
+            return number1 - number2
+            
+        case .divide:
+            return number1 / number2
+            
+        case .multiply:
+            return number1 * number2
+        }
+    }
+    
+    private func operationButtonPressed(for pressedOperation: Operation) {
+        guard currentOperation != nil else {
+            operand1 = Double(currentTextInResultLabel) ?? 0
+            currentTextInResultLabel = "0"
+            currentOperation = pressedOperation
+            return
+        }
+        operand2 = Double(currentTextInResultLabel) ?? 0
+        let result = resultOfOperation(operation: currentOperation!, operand1, and: operand2)
+        operand1 = result
+        currentTextInResultLabel = "0"
+        currentOperation = pressedOperation
     }
     
     // MARK: Starting Here:
@@ -120,6 +152,9 @@ class ViewController: UIViewController {
         // AC button:
         case 11:
             currentTextInResultLabel = "0"
+            currentOperation = nil
+            operand1 = 0
+            operand2 = 0
         
         // squareRoot button:
         case 12:
@@ -131,7 +166,7 @@ class ViewController: UIViewController {
         
         // divide button:
         case 14:
-            return
+            operationButtonPressed(for: .divide)
                         
         // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
@@ -143,15 +178,15 @@ class ViewController: UIViewController {
         
         // multiply button:
         case 24:
-            return
+            operationButtonPressed(for: .multiply)
             
         // minus button:
         case 34:
-            return
+            operationButtonPressed(for: .minus)
             
         // plus button:
         case 44:
-            return
+            operationButtonPressed(for: .plus)
             
         // PlusMinus button:
         case 51:
@@ -167,10 +202,18 @@ class ViewController: UIViewController {
         case 53:
             guard !currentTextInResultLabel.contains(sender.currentTitle!) else { return }
             currentTextInResultLabel += sender.currentTitle ?? ""
-         
-        // Result button:
+            
+        // Result (Equal) button:
         case 54:
-            return
+            
+            guard currentOperation != nil else {
+                return
+            }
+            operand2 = Double(currentTextInResultLabel) ?? 0
+            let result = resultOfOperation(operation: currentOperation!, operand1, and: operand2)
+            operand1 = result
+            currentTextInResultLabel = String(result)
+            currentOperation = nil
             
         default:
             break
