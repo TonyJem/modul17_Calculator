@@ -5,9 +5,9 @@ import UIKit
 class MainViewController: UIViewController {
     
     // MARK: Outlets:
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet var allButtons: [CalcButton]!
+    @IBOutlet private weak var backgroundView: UIView!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private var allButtons: [CalcButton]!
     
     // MARK: Properties:
     private let allPrimaryButtonTags = [21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53]
