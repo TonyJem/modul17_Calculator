@@ -191,11 +191,11 @@ class ViewController: UIViewController {
             
         // plus button:
         case 44:
-            guard sender.backgroundColor != .green else { return }
+            guard sender.backgroundColor != Colors.actionButtonFrozen else { return }
             sender.isUserInteractionEnabled = false
             sender.animateWithPulsate()
             sender.animateWithFlash()
-            sender.backgroundColor = .green
+            sender.backgroundColor = Colors.actionButtonFrozen
             operationButtonPressed(for: .plus)
             
         // PlusMinus button:
