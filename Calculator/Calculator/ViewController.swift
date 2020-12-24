@@ -32,17 +32,14 @@ class MainViewController: UIViewController {
                                    _ number1: Double,
                                    and number2: Double) -> Double {
         switch operation {
-        case .plus:
+        case .addition:
             return number1 + number2
-            
-        case .minus:
+        case .subtraction:
             return number1 - number2
-            
-        case .divide:
-            return number1 / number2
-            
-        case .multiply:
+        case .multiplication:
             return number1 * number2
+        case .division:
+            return number1 / number2
         }
     }
     
@@ -162,7 +159,7 @@ class MainViewController: UIViewController {
         
         // divide button:
         case 14:
-            operationButtonPressed(for: .divide)
+            operationButtonPressed(for: .division)
                         
         // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
@@ -181,11 +178,11 @@ class MainViewController: UIViewController {
         
         // multiply button:
         case 24:
-            operationButtonPressed(for: .multiply)
+            operationButtonPressed(for: .multiplication)
             
         // minus button:
         case 34:
-            operationButtonPressed(for: .minus)
+            operationButtonPressed(for: .subtraction)
             
         // plus button:
         case 44:
@@ -194,7 +191,7 @@ class MainViewController: UIViewController {
             sender.animateWithPulsate()
             sender.animateWithFlash()
             sender.backgroundColor = Colors.actionButtonFrozen
-            operationButtonPressed(for: .plus)
+            operationButtonPressed(for: .addition)
             
         // PlusMinus button:
         case 51:

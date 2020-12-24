@@ -1,6 +1,3 @@
     enum BasicMathOperation {
-        case plus
-        case minus
-        case divide
-        case multiply
+        case addition, subtraction, multiplication, division
     }
