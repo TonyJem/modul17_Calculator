@@ -8,14 +8,13 @@ enum ButtonColorScheme {
     var buttonBackgroundColor: UIColor{
         switch self {
         case .actionButtonNormal:
-            return .orange
-
+            return Colors.actionButtonNormal
             
         case .primaryButton:
-            return .cyan
+            return Colors.primaryButton
             
         case .secondaryButton:
-            return .lightGray
+            return Colors.secondaryButton
         }
     }
 }

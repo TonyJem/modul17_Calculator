@@ -10,17 +10,10 @@ class ViewController: UIViewController {
     @IBOutlet var allButtons: [CalcButton]!
     
     // MARK: Properties:
-    private let appBackgroundColor: UIColor = .black
-    
-    private let labelFontColorNormal: UIColor = .white
-    private let labelFontColorFrozen: UIColor = .gray
     private let labelFontSize: CGFloat = 65
-    
-    private let buttonFontColor: UIColor = .blue
     private let buttonFontSize: CGFloat = 42
     
     private let buttonBorderWidth: CGFloat = 3
-    private let buttonBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
     private let buttonBorderCornerRadius: CGFloat = 20
     
     private let allPrimaryButtonTags = [21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53]
@@ -29,7 +22,6 @@ class ViewController: UIViewController {
     
     private let colorSchemeForPrimaryButtons: ButtonColorScheme = .primaryButton
     private let colorSchemeForActionButtons: ButtonColorScheme = .actionButtonNormal
-    private let colorSchemeForActionButtonsFrozen: ButtonColorScheme = .actionButtonFrozen
     private let colorSchemeForSecondaryButtons: ButtonColorScheme = .secondaryButton
     
     private var currentOperation: Operation? = nil
@@ -64,7 +56,7 @@ class ViewController: UIViewController {
         guard currentOperation != nil else {
             operand1 = Double(currentTextInResultLabel) ?? 0
 //            TODO: Refactor below next doubled code's rows:
-            resultLabel.textColor = labelFontColorFrozen
+            resultLabel.textColor = Colors.labelFontColorFrozen
             currentOperation = pressedOperation
             return
         }
@@ -72,7 +64,7 @@ class ViewController: UIViewController {
         let result = resultOfOperation(operation: currentOperation!, operand1, and: operand2)
         operand1 = result
         resultLabel.text = String(result)
-        resultLabel.textColor = labelFontColorFrozen
+        resultLabel.textColor = Colors.labelFontColorFrozen
         currentOperation = pressedOperation
     }
     
@@ -84,7 +76,7 @@ class ViewController: UIViewController {
     
     // MARK: Methods:
     private func setupUI() {
-        backView.backgroundColor = appBackgroundColor
+        backView.backgroundColor = Colors.applicationBackgroundColor
         setupResultLabelUI()
         for button in allButtons {
             setupAllButtonsUI(for: button)
@@ -93,7 +85,7 @@ class ViewController: UIViewController {
     
     private func setupAllButtonsUI(for button: CalcButton) {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: buttonFontSize)
-        button.setTitleColor(buttonFontColor, for: .normal)
+        button.setTitleColor(Colors.buttonFontColor, for: .normal)
         
         setupButtonBorders(for: button)
         
@@ -137,12 +129,12 @@ class ViewController: UIViewController {
     
     private func setupButtonBorders(for button: CalcButton){
         button.layer.borderWidth = buttonBorderWidth
-        button.layer.borderColor = buttonBorderColor.cgColor
+        button.layer.borderColor = Colors.buttonBorderColor.cgColor
         button.layer.cornerRadius = buttonBorderCornerRadius
     }
     
     private func setupResultLabelUI(){
-        resultLabel.textColor = labelFontColorNormal
+        resultLabel.textColor = Colors.labelFontColorNormal
         resultLabel.font = UIFont.systemFont(ofSize: labelFontSize)
         resultLabel.text = currentTextInResultLabel
     }
@@ -176,9 +168,8 @@ class ViewController: UIViewController {
                         
         // Numeric buttons:
         case 21, 22, 23, 31, 32, 33, 41, 42, 43, 52:
-            
-            guard resultLabel.textColor != labelFontColorFrozen else {
-                resultLabel.textColor = labelFontColorNormal
+            guard resultLabel.textColor != Colors.labelFontColorFrozen else {
+                resultLabel.textColor = Colors.labelFontColorNormal
                 currentTextInResultLabel = ""
                 currentTextInResultLabel += sender.currentTitle ?? ""
                 return
@@ -224,7 +215,6 @@ class ViewController: UIViewController {
             
         // Result (Equal) button:
         case 54:
-            
             guard currentOperation != nil else {
                 return
             }
@@ -233,7 +223,7 @@ class ViewController: UIViewController {
             operand1 = result
             
             resultLabel.text = String(result)
-            resultLabel.textColor = labelFontColorFrozen
+            resultLabel.textColor = Colors.labelFontColorFrozen
             currentOperation = nil
             
         default:
