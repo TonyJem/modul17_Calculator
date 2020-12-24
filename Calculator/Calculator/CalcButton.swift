@@ -1,20 +1,16 @@
 import UIKit
 
 enum ButtonColorScheme {
-    case actionButtonNormal
-    case primaryButton
-    case secondaryButton
-    
+    case primaryButton, secondaryButton, actionButtonNormal
+
     var buttonBackgroundColor: UIColor{
         switch self {
-        case .actionButtonNormal:
-            return Colors.actionButtonNormal
-            
         case .primaryButton:
             return Colors.primaryButton
-            
         case .secondaryButton:
-            return Colors.secondaryButton
+            return Colors.secondaryButton      
+        case .actionButtonNormal:
+            return Colors.actionButtonNormal
         }
     }
 }
