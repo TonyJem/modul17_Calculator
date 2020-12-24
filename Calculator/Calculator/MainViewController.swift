@@ -135,14 +135,30 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func resetButtonTapped(_ sender: CalcButton) {
+    }
+    
+    @IBAction func squareroot(_ sender: CalcButton) {
+    }
+
+    @IBAction func percentButtonTapped(_ sender: CalcButton) {
+    }
+    
+    @IBAction func basicOperationButtonTapped(_ sender: CalcButton) {
+    }
+    
+    @IBAction func equalsButtonTapped(_ sender: CalcButton) {
+    }
+    
+    @IBAction func decimalpointButtonTapped(_ sender: CalcButton) {
+    }
+    
+    @IBAction func plusminusButtonTapped(_ sender: CalcButton) {
+    }
     
     
     
-    
-    
-    
-    
-    
+    // MARK: OLD Actions:
     @IBAction func someButtonTapped(_ sender: CalcButton) {
         
         switch sender.tag {

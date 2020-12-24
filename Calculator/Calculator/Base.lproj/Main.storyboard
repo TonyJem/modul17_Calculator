@@ -38,6 +38,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="138.5"/>
                                                         <state key="normal" title="reset"/>
                                                         <connections>
+                                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNn-CT-mfT"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CD3-px-Cdo"/>
                                                         </connections>
                                                     </button>
@@ -46,12 +47,14 @@
                                                         <state key="normal" title="squareroot"/>
                                                         <connections>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAy-Vr-Qyq"/>
+                                                            <action selector="squareroot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaS-Qk-N17"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-cr-QVq" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="205.5" y="0.0" width="98" height="138.5"/>
                                                         <state key="normal" title="percent"/>
                                                         <connections>
+                                                            <action selector="percentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXF-ni-OgZ"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAM-Z6-U7U"/>
                                                         </connections>
                                                     </button>
@@ -59,6 +62,7 @@
                                                         <rect key="frame" x="308.5" y="0.0" width="97.5" height="138.5"/>
                                                         <state key="normal" title="division"/>
                                                         <connections>
+                                                            <action selector="basicOperationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axE-oe-eoe"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jop-qf-M88"/>
                                                         </connections>
                                                     </button>
@@ -95,6 +99,7 @@
                                                         <rect key="frame" x="308.5" y="0.0" width="97.5" height="138.5"/>
                                                         <state key="normal" title="multiplication"/>
                                                         <connections>
+                                                            <action selector="basicOperationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mi-QS-pa7"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etI-SN-JKF"/>
                                                         </connections>
                                                     </button>
@@ -131,6 +136,7 @@
                                                         <rect key="frame" x="308.5" y="0.0" width="97.5" height="139"/>
                                                         <state key="normal" title="subtraction"/>
                                                         <connections>
+                                                            <action selector="basicOperationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2w-TW-OWt"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5OR-HW-s91"/>
                                                         </connections>
                                                     </button>
@@ -167,6 +173,7 @@
                                                         <rect key="frame" x="308.5" y="0.0" width="97.5" height="138.5"/>
                                                         <state key="normal" title="addition"/>
                                                         <connections>
+                                                            <action selector="basicOperationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6v-LQ-Q0T"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJ0-Q2-T09"/>
                                                         </connections>
                                                     </button>
@@ -179,6 +186,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="138.5"/>
                                                         <state key="normal" title="plusminus"/>
                                                         <connections>
+                                                            <action selector="plusminusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcB-4X-ZRL"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUL-HE-qvM"/>
                                                         </connections>
                                                     </button>
@@ -194,6 +202,7 @@
                                                         <rect key="frame" x="205.5" y="0.0" width="98" height="138.5"/>
                                                         <state key="normal" title="decimalpoint"/>
                                                         <connections>
+                                                            <action selector="decimalpointButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7m-xK-dfF"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wag-hH-ReY"/>
                                                         </connections>
                                                     </button>
@@ -201,6 +210,7 @@
                                                         <rect key="frame" x="308.5" y="0.0" width="97.5" height="138.5"/>
                                                         <state key="normal" title="equals"/>
                                                         <connections>
+                                                            <action selector="equalsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGd-3V-NBf"/>
                                                             <action selector="someButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htr-Wq-FGr"/>
                                                         </connections>
                                                     </button>
