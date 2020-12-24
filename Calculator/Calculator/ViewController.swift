@@ -10,8 +10,6 @@ class MainViewController: UIViewController {
     @IBOutlet var allButtons: [CalcButton]!
     
     // MARK: Properties:
-    private let labelFontSize: CGFloat = 65
-    
     private let allPrimaryButtonTags = [21, 22, 23, 31, 32, 33, 41, 42, 43, 51, 52, 53]
     private let allActionButtonTags = [14, 24, 34, 44, 54]
     private let allSecondaryButtonTags = [11, 12, 13]
@@ -131,7 +129,7 @@ class MainViewController: UIViewController {
     
     private func setupResultLabelUI(){
         resultLabel.textColor = Colors.labelFontColorNormal
-        resultLabel.font = UIFont.systemFont(ofSize: labelFontSize)
+        resultLabel.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
         resultLabel.text = currentTextInResultLabel
     }
     
