@@ -134,6 +134,10 @@ class MainViewController: UIViewController {
     }
     
     // MARK: Actions:
+    @IBAction func numericButtonTapped(_ sender: CalcButton) {
+        
+    }
+    
     @IBAction func someButtonTapped(_ sender: CalcButton) {
         
         switch sender.tag {
