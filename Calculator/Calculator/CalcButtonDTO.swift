@@ -19,14 +19,12 @@ struct CalcButtonDTO {
     
     init(fontSize: CGFloat = 42,
          fontColor: UIColor = Colors.buttonFontColor,
-//         fontWeight: UIFont.Weight,
          backgroundColor: UIColor = Colors.primaryButton,
          cornerRadius: CGFloat = 20,
          borderWidth: CGFloat = 3,
          borderColor: UIColor = Colors.buttonBorderColor) {
         self.fontSize = fontSize
         self.fontColor = fontColor
-//        self.fontWeight = fontWeight
         self.backgroundColor = backgroundColor
         self.cornerRadius = cornerRadius
         self.borderWidth = borderWidth
@@ -35,7 +33,6 @@ struct CalcButtonDTO {
 
     let fontSize: CGFloat
     let fontColor: UIColor
-//    let fontWeight: UIFont.Weight
     let backgroundColor: UIColor
     let cornerRadius: CGFloat
     let borderWidth: CGFloat
