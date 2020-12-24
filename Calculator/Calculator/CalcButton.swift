@@ -1,16 +1,22 @@
 import UIKit
 
 enum ButtonColorScheme {
-    case actionButton
+    case actionButtonNormal
+    case actionButtonFrozen
     case primaryButton
     case secondaryButton
     
     var buttonBackgroundColor: UIColor{
         switch self {
-        case .actionButton:
+        case .actionButtonNormal:
             return .orange
+
+        case .actionButtonFrozen:
+            return .green
+            
         case .primaryButton:
             return .cyan
+            
         case .secondaryButton:
             return .lightGray
         }
@@ -46,5 +52,12 @@ class CalcButton: UIButton {
 //        flash.autoreverses = true
         flash.repeatCount = 1
         layer.add(flash, forKey: nil)
+    }
+    
+    override func setTitle(_ title: String?, for state: UIControl.State) {
+        UIView.performWithoutAnimation {
+            super.setTitle(title, for: state)
+            super.layoutIfNeeded()
+        }
     }
 }
