@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A85118C258178E000A1E22C /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85118B258178E000A1E22C /* CalcButton.swift */; };
-		3A8511DE2593D5BB00A1E22C /* BasicMathOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8511DD2593D5BB00A1E22C /* BasicMathOperation.swift */; };
+		3A8511DE2593D5BB00A1E22C /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8511DD2593D5BB00A1E22C /* Operations.swift */; };
 		3A8511E1259516E000A1E22C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8511E0259516DF00A1E22C /* Colors.swift */; };
 		3A8511E42595250D00A1E22C /* CalcButtonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8511E32595250D00A1E22C /* CalcButtonDTO.swift */; };
 		3AF94C4D25955C640016AE35 /* oldMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF94C4C25955C640016AE35 /* oldMainViewController.swift */; };
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3A85118B258178E000A1E22C /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
-		3A8511DD2593D5BB00A1E22C /* BasicMathOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMathOperation.swift; sourceTree = "<group>"; };
+		3A8511DD2593D5BB00A1E22C /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 		3A8511E0259516DF00A1E22C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A8511E32595250D00A1E22C /* CalcButtonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtonDTO.swift; sourceTree = "<group>"; };
 		3AF94C4C25955C640016AE35 /* oldMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldMainViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				3AFF48CC25814E4400C6E153 /* MainViewController.swift */,
 				3AF94C4C25955C640016AE35 /* oldMainViewController.swift */,
 				3A85118B258178E000A1E22C /* CalcButton.swift */,
-				3A8511DD2593D5BB00A1E22C /* BasicMathOperation.swift */,
+				3A8511DD2593D5BB00A1E22C /* Operations.swift */,
 				3AFF48CE25814E4400C6E153 /* Main.storyboard */,
 				3AFF48D125814E4600C6E153 /* Assets.xcassets */,
 				3AFF48D325814E4600C6E153 /* LaunchScreen.storyboard */,
@@ -168,7 +168,7 @@
 				3AFF48CD25814E4400C6E153 /* MainViewController.swift in Sources */,
 				3AFF48C925814E4400C6E153 /* AppDelegate.swift in Sources */,
 				3AFF48CB25814E4400C6E153 /* SceneDelegate.swift in Sources */,
-				3A8511DE2593D5BB00A1E22C /* BasicMathOperation.swift in Sources */,
+				3A8511DE2593D5BB00A1E22C /* Operations.swift in Sources */,
 				3A8511E42595250D00A1E22C /* CalcButtonDTO.swift in Sources */,
 				3AFA07CC25953E3D00B0193F /* CalcLabelDTO.swift in Sources */,
 				3AFA07CF2595490100B0193F /* Localizations.swift in Sources */,
