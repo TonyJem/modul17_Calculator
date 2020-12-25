@@ -73,6 +73,7 @@ extension MainViewController {
             createTitle(for: button)
             setFont(for: button, with: dto)
             setBackground(for: button, with: dto)
+            setBorders(for: button, with: dto)
         }
     }
     
@@ -87,5 +88,11 @@ extension MainViewController {
     
     private func setBackground(for button: CalcButton, with dto: CalcButtonDTO) {
         button.backgroundColor = dto.backgroundColor
+    }
+    
+    private func setBorders(for button: CalcButton, with dto: CalcButtonDTO) {
+        button.layer.borderWidth = dto.borderWidth
+        button.layer.borderColor = dto.borderColor.cgColor
+        button.layer.cornerRadius = dto.cornerRadius
     }
 }
