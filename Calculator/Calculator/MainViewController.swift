@@ -6,8 +6,8 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private var primaryButtons: [CalcButton]!
-    @IBOutlet var secondaryButtons: [CalcButton]!
-    @IBOutlet var actionButtons: [CalcButton]!
+    @IBOutlet private var secondaryButtons: [CalcButton]!
+    @IBOutlet private var actionButtons: [CalcButton]!
     
     // MARK: Properties:
     
