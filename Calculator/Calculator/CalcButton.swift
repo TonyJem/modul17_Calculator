@@ -1,7 +1,7 @@
 import UIKit
 
 class CalcButton: UIButton {
-    var titleToShow: String { setTitleFor(self) }
+    var title: String { setTitleFor(self) }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

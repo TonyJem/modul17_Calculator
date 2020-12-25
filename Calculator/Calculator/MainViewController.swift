@@ -82,7 +82,7 @@ extension MainViewController {
     }
     
     private func createTitle(for button: CalcButton) {
-            button.setTitle(button.titleToShow, for: .normal)
+            button.setTitle(button.title, for: .normal)
     }
     
     private func setFont(for button: CalcButton, with dto: CalcButtonDTO) {
