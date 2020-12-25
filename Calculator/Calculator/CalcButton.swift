@@ -3,7 +3,7 @@ import UIKit
 enum ButtonColorScheme {
     case primaryButton, secondaryButton, actionButtonNormal
 
-    var buttonBackgroundColor: UIColor{
+    var buttonBackgroundColor: UIColor {
         switch self {
         case .primaryButton:
             return Colors.primaryButton
@@ -16,7 +16,61 @@ enum ButtonColorScheme {
 }
 
 class CalcButton: UIButton {
-    var titleToShow: String = "TTT"
+    var titleToShow: String {
+        if let buttonTitle = self.title(for: .normal) {
+            switch buttonTitle {
+            case "0":
+                return __("number_0_button_title")
+            case "1":
+                return __("number_1_button_title")
+            case "2":
+                return __("number_2_button_title")
+            case "3":
+                return __("number_3_button_title")
+            case "4":
+                return __("number_4_button_title")
+            case "5":
+                return __("number_5_button_title")
+            case "6":
+                return __("number_6_button_title")
+            case "7":
+                return __("number_7_button_title")
+            case "8":
+                return __("number_8_button_title")
+            case "9":
+                return __("number_9_button_title")
+                
+            case "addition":
+                return __("addition_button_title")
+            case "subtraction":
+                return __("subtraction_button_title")
+            case "multiplication":
+                return __("multiplication_button_title")
+            case "division":
+                return __("division_button_title")
+                
+            case "squareroot":
+                return __("square_root_button_title")
+            case "percent":
+                return __("percent_button_title")
+                
+            case "reset":
+                return __("reset_button_title")
+            case "equals":
+                return __("equals_button_title")
+            case "decimalpoint":
+                return __("decimal_point_button_title")
+            case "plusminus":
+                return __("plus_minus_button_title")
+            default:
+                //  TODO: Create Error handling, when buttons are empty
+                return "Error2"
+            }
+        }
+//  TODO: Create Error handling, when buttons are empty
+    return "Error1"
+    }
+    
     var colorScheme: ButtonColorScheme = .primaryButton
     
     required init?(coder aDecoder: NSCoder) {

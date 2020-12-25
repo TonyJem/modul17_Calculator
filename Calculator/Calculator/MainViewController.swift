@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     private func createTitlesForButtons(){
         for button in allButtons {
             button.setTitle(button.titleToShow, for: .normal)
-        }   
+        }
     }
     
     // MARK: Actions:
