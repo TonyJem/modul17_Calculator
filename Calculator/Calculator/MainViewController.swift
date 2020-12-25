@@ -18,13 +18,11 @@ class MainViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: Methods:
+    // MARK: - SetupUI Methods:
     private func setupUI() {
         setupViewUI(for: backgroundView)
         setupLabelUI(for: resultLabel)
-        setupButtonsUI(for: primaryButtons, with: .primaryButtonBackground)
-        setupButtonsUI(for: secondaryButtons, with: .secondaryButtonBackground)
-        setupButtonsUI(for: actionButtons, with: .actionButtonActiveBackground)
+        setupAllButtonsUI()
     }
     
     private func setupViewUI(for view: UIView) {
@@ -36,22 +34,7 @@ class MainViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
     }
     
-    private func setupButtonsUI(for buttons: [CalcButton], with background: ButtonBackground) {
-        for button in buttons {
-            createTitle(for: button)
-            setBackground(for: button, with: background)
-        }
-    }
-    
-    private func createTitle(for button: CalcButton) {
-            button.setTitle(button.titleToShow, for: .normal)
-    }
-    
-    private func setBackground(for button: CalcButton, with background: ButtonBackground) {
-        button.backgroundColor = background.color
-    }
-    
-    // MARK: Actions:
+    // MARK: - Actions:
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
     }
     
@@ -74,5 +57,35 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func plusminusButtonTapped(_ sender: CalcButton) {
+    }
+}
+
+// MARK: - Buttons UI Setup:
+extension MainViewController {
+    private func setupAllButtonsUI() {
+        setupButtonsUI(for: primaryButtons, with: .primaryButtonDTO)
+        setupButtonsUI(for: secondaryButtons, with: .secondaryButtonDTO)
+        setupButtonsUI(for: actionButtons, with: .actionButtonActiveDTO)
+    }
+
+    private func setupButtonsUI(for buttons: [CalcButton], with dto: CalcButtonDTO) {
+        for button in buttons {
+            createTitle(for: button)
+            setFont(for: button, with: dto)
+            setBackground(for: button, with: dto)
+        }
+    }
+    
+    private func createTitle(for button: CalcButton) {
+            button.setTitle(button.titleToShow, for: .normal)
+    }
+    
+    private func setFont(for button: CalcButton, with dto: CalcButtonDTO) {
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: dto.fontSize)
+        button.setTitleColor(dto.fontColor, for: .normal)
+    }
+    
+    private func setBackground(for button: CalcButton, with dto: CalcButtonDTO) {
+        button.backgroundColor = dto.backgroundColor
     }
 }
