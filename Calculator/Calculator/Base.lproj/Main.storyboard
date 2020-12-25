@@ -47,7 +47,7 @@
                                                         <state key="normal" title="squareroot"/>
                                                         <connections>
                                                             <action selector="anyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egb-Ii-ISa"/>
-                                                            <action selector="squareroot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaS-Qk-N17"/>
+                                                            <action selector="squareRootButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaS-Qk-N17"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-cr-QVq" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
@@ -187,7 +187,7 @@
                                                         <state key="normal" title="plusminus"/>
                                                         <connections>
                                                             <action selector="anyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OhM-Wm-8Tg"/>
-                                                            <action selector="plusminusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcB-4X-ZRL"/>
+                                                            <action selector="plusMinusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcB-4X-ZRL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-SH-Q2i" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">
@@ -203,7 +203,7 @@
                                                         <state key="normal" title="decimalpoint"/>
                                                         <connections>
                                                             <action selector="anyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqd-OB-lAr"/>
-                                                            <action selector="decimalpointButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7m-xK-dfF"/>
+                                                            <action selector="decimalPointButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7m-xK-dfF"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7Z-Qz-Lrf" customClass="CalcButton" customModule="Calculator" customModuleProvider="target">

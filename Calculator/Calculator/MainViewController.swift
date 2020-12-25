@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
         currentLabelText = "0"
     }
     
-    @IBAction func squareroot(_ sender: CalcButton) {
+    @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
     }
     
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
@@ -69,10 +69,10 @@ class MainViewController: UIViewController {
     @IBAction func equalsButtonTapped(_ sender: CalcButton) {
     }
     
-    @IBAction func decimalpointButtonTapped(_ sender: CalcButton) {
+    @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
     }
     
-    @IBAction func plusminusButtonTapped(_ sender: CalcButton) {
+    @IBAction func plusMinusButtonTapped(_ sender: CalcButton) {
     }
 }
 
