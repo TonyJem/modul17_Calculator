@@ -1,5 +1,25 @@
 import UIKit
 
+enum ButtonBackground {
+    case primaryButton
+    case secondaryButton
+    case actionButtonActive
+    case actionButtonNotActive
+    
+    var color: UIColor {
+        switch self {
+        case .primaryButton:
+            return Colors.primaryButton
+        case .secondaryButton:
+            return Colors.secondaryButton
+        case .actionButtonActive:
+            return Colors.actionButtonActive
+        case .actionButtonNotActive:
+            return Colors.actionButtonNotActive
+        }
+    }
+}
+
 class CalcButton: UIButton {
     var titleToShow: String { setTitleFor(self) }
     
