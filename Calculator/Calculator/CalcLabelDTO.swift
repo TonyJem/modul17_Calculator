@@ -16,6 +16,7 @@ struct CalcLabelDTO {
         self.fontSize = fontSize
         self.fontColor = fontColor
     }
+    
     let backgroundColor: UIColor
     let fontSize: CGFloat
     let fontColor: UIColor
