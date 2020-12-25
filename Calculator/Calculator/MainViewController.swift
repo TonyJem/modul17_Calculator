@@ -34,12 +34,13 @@ class MainViewController: UIViewController {
     
     private func setupButtonUIFor(_ buttons: [CalcButton]) {
         createTitlesFor(buttons)
+        for button in buttons {
+            createTitleFor(button)
+        }
     }
     
-    private func createTitlesFor(_ buttons: [CalcButton]) {
-        for button in buttons {
+    private func createTitleFor(_ button: CalcButton) {
             button.setTitle(button.titleToShow, for: .normal)
-        }
     }
     
     private func setPrimaryButtonBackgroudFor(_ button: CalcButton) {
