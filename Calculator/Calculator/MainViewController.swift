@@ -42,6 +42,22 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func setPrimaryButtonBackgroudFor(_ button: CalcButton) {
+        button.backgroundColor = CalcButtonDTO.primaryButton.backgroundColor
+    }
+    
+    private func setSecondaryButtonBackgroudFor(_ button: CalcButton) {
+        button.backgroundColor = CalcButtonDTO.secondaryButton.backgroundColor
+    }
+    
+    private func setActionButtonActiveBackgroudFor(_ button: CalcButton) {
+        button.backgroundColor = CalcButtonDTO.actionButtonActive.backgroundColor
+    }
+    
+    private func setactionButtonNotActiveFor(_ button: CalcButton) {
+        button.backgroundColor = CalcButtonDTO.actionButtonNotActive.backgroundColor
+    }
+    
     // MARK: Actions:
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
     }
