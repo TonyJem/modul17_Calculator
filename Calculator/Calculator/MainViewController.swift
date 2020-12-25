@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
+        currentLabelText = "0"
     }
     
     @IBAction func squareroot(_ sender: CalcButton) {
