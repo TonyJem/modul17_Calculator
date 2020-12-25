@@ -5,7 +5,6 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var resultLabel: UILabel!
-    @IBOutlet private var allButtons: [CalcButton]!
     @IBOutlet private var primaryButtons: [CalcButton]!
     @IBOutlet var secondaryButtons: [CalcButton]!
     @IBOutlet var actionButtons: [CalcButton]!
@@ -23,7 +22,9 @@ class MainViewController: UIViewController {
     private func setupUI() {
         setupApplicationBackground()
         setupLabelUIFor(resultLabel)
-        setupButtonUIFor(allButtons)
+        setupButtonUIFor(primaryButtons)
+        setupButtonUIFor(secondaryButtons)
+        setupButtonUIFor(actionButtons)
     }
     
     private func setupApplicationBackground() {
