@@ -1,5 +1,25 @@
 import UIKit
 
+enum ButtonDTO {
+    case primaryButtonDTO
+    case secondaryButtonDTO
+    case actionButtonActiveDTO
+    case actionButtonNotActiveDTO
+
+    var dto: CalcButtonDTO {
+        switch self {
+        case .primaryButtonDTO:
+            return CalcButtonDTO.primaryButtonDTO
+        case .secondaryButtonDTO:
+            return CalcButtonDTO.secondaryButtonDTO
+        case .actionButtonActiveDTO:
+            return CalcButtonDTO.actionButtonActiveDTO
+        case .actionButtonNotActiveDTO:
+            return CalcButtonDTO.actionButtonNotActiveDTO
+        }
+    }
+}
+
 struct CalcButtonDTO {
     let fontSize: CGFloat
     let fontColor: UIColor
@@ -8,19 +28,19 @@ struct CalcButtonDTO {
     let borderWidth: CGFloat
     let borderColor: UIColor
     
-    static var primaryButton: CalcButtonDTO {
+    static var primaryButtonDTO: CalcButtonDTO {
         return CalcButtonDTO(backgroundColor: Colors.primaryButton)
     }
     
-    static var secondaryButton: CalcButtonDTO {
+    static var secondaryButtonDTO: CalcButtonDTO {
         return CalcButtonDTO(backgroundColor: Colors.secondaryButton)
     }
     
-    static var actionButtonActive: CalcButtonDTO {
+    static var actionButtonActiveDTO: CalcButtonDTO {
         return CalcButtonDTO(backgroundColor: Colors.actionButtonActive)
     }
     
-    static var actionButtonNotActive: CalcButtonDTO {
+    static var actionButtonNotActiveDTO: CalcButtonDTO {
         return CalcButtonDTO(backgroundColor: Colors.actionButtonNotActive)
     }
     
