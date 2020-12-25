@@ -6,7 +6,10 @@ class CalcButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+}
+
+// MARK: - Set Button title from Localzable.stings
+extension CalcButton {
     private func setTitleFor(_ button: CalcButton) -> String {
         if let buttonTitle = button.title(for: .normal) {
             switch buttonTitle {
