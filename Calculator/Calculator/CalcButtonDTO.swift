@@ -1,6 +1,10 @@
 import UIKit
 
 struct CalcButtonDTO {
+    static var defaultButton: CalcButtonDTO {
+        return CalcButtonDTO()
+    }
+    
     static var primaryButton: CalcButtonDTO {
         return CalcButtonDTO()
     }
