@@ -63,12 +63,12 @@ class MainViewController: UIViewController {
 // MARK: - Buttons UI Setup:
 extension MainViewController {
     private func setupAllButtonsUI() {
-        setupButtonsUI(for: primaryButtons, with: .primaryButtonDTO)
-        setupButtonsUI(for: secondaryButtons, with: .secondaryButtonDTO)
-        setupButtonsUI(for: actionButtons, with: .actionButtonActiveDTO)
+        setButtonsUI(for: primaryButtons, with: .primaryButtonDTO)
+        setButtonsUI(for: secondaryButtons, with: .secondaryButtonDTO)
+        setButtonsUI(for: actionButtons, with: .actionButtonActiveDTO)
     }
 
-    private func setupButtonsUI(for buttons: [CalcButton], with dto: CalcButtonDTO) {
+    private func setButtonsUI(for buttons: [CalcButton], with dto: CalcButtonDTO) {
         for button in buttons {
             createTitle(for: button)
             setFont(for: button, with: dto)
