@@ -1,27 +1,63 @@
 //MARK: Numeric
 "number_0_button_title" = "0";
+"number_0_button_description" = "0";
+
 "number_1_button_title" = "1";
+"number_1_button_description" = "1";
+
 "number_2_button_title" = "2";
+"number_2_button_description" = "2";
+
 "number_3_button_title" = "3";
+"number_3_button_description" = "3";
+
 "number_4_button_title" = "4";
+"number_4_button_description" = "4";
+
 "number_5_button_title" = "5";
+"number_5_button_description" = "5";
+
 "number_6_button_title" = "6";
+"number_6_button_description" = "6";
+
 "number_7_button_title" = "7";
+"number_7_button_description" = "7";
+
 "number_8_button_title" = "8";
+"number_8_button_description" = "8";
+
 "number_9_button_title" = "9";
+"number_9_button_description" = "9";
 
 //MARK: Basic Math Operations
 "addition_button_title" = "+";
+"addition_button_description" = "addition";
+
 "subtraction_button_title" = "\U2212";
+"subtraction_button_description" = "subtraction";
+
 "multiplication_button_title" = "\U00D7";
+"multiplication_button_description" = "multiplication";
+
 "division_button_title" = "\U00F7";
+"division_button_description" = "division";
 
 //MARK: Advanced Math Operations
 "square_root_button_title" = "\U221A";
+"square_root_button_description" = "squareRoot";
+
 "percent_button_title" = "%";
+"percent_button_description" = "percent";
 
 //MARK: Other and Service Buttons
 "reset_button_title" = "AC";
+"reset_button_description" = "reset";
+
 "equals_button_title" = "=";
+"equals_button_description" = "equals";
+
 "decimal_point_button_title" = ".";
+"decimal_point_button_description" = "decimalPoint";
+
 "plus_minus_button_title" = "\U207A\U2215\U208B";
+"plus_minus_button_description" = "plusMinus";
