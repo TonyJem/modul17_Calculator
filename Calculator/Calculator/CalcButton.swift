@@ -16,8 +16,16 @@ enum ButtonColorScheme {
 }
 
 class CalcButton: UIButton {
-    var titleToShow: String {
-        if let buttonTitle = self.title(for: .normal) {
+    var titleToShow: String { setTitleFor(self) }
+    
+    private var colorScheme: ButtonColorScheme = .primaryButton
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    private func setTitleFor(_ button: CalcButton) -> String {
+        if let buttonTitle = button.title(for: .normal) {
             switch buttonTitle {
             case "0":
                 return __("number_0_button_title")
@@ -63,18 +71,12 @@ class CalcButton: UIButton {
             case "plusminus":
                 return __("plus_minus_button_title")
             default:
-                //  TODO: Create Error handling, when buttons are empty
+                //  TODO: Create Error handling, when current button title was not found in current button titles list
                 return "Error2"
             }
         }
-//  TODO: Create Error handling, when buttons are empty
-    return "Error1"
-    }
-    
-    var colorScheme: ButtonColorScheme = .primaryButton
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        //  TODO: Create Error handling, when buttons title is nil
+        return "Error1"
     }
     
     func animateWithPulsate() {
