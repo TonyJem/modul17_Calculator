@@ -13,11 +13,11 @@ struct CalcButtonDTO {
         return CalcButtonDTO()
     }
     
-    static var actionButtonNormal: CalcButtonDTO {
+    static var actionButtonActive: CalcButtonDTO {
         return CalcButtonDTO()
     }
     
-    static var actionButtonFrozen: CalcButtonDTO {
+    static var actionButtonNotActive: CalcButtonDTO {
         return CalcButtonDTO()
     }
     
