@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     
     // MARK: Methods:
     private func setupUI() {
-        backgroundView.backgroundColor = Colors.applicationBackgroundColor
+        setupApplicationBackground()
         setupResultLabelUI()
         createTitlesFor(allButtons)
     }
@@ -27,6 +27,10 @@ class MainViewController: UIViewController {
         for button in buttons {
             button.setTitle(button.titleToShow, for: .normal)
         }
+    }
+    
+    private func setupApplicationBackground() {
+        backgroundView.backgroundColor = Colors.applicationBackgroundColor
     }
     
     private func setupResultLabelUI() {
