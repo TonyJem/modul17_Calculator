@@ -35,6 +35,10 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Actions:
+    @IBAction func anyButtonTapped(_ sender: CalcButton) {
+        sender.showAnimatedClick()
+    }
+    
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
     }
     

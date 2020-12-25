@@ -61,8 +61,16 @@ class CalcButton: UIButton {
         //  TODO: Create Error handling, when buttons title is nil
         return "Error1"
     }
+}
+
+// MARK: - Animated Click
+extension CalcButton {
+    func showAnimatedClick() {
+        animateWithPulsate()
+        animateWithFlash()
+    }
     
-    func animateWithPulsate() {
+    private func animateWithPulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.2
         pulse.fromValue = 0.97
@@ -74,7 +82,7 @@ class CalcButton: UIButton {
         layer.add(pulse, forKey: nil)
     }
     
-    func animateWithFlash() {
+    private func animateWithFlash() {
         let flash = CABasicAnimation(keyPath: "opacity")
         flash.duration = 0.1
         flash.fromValue = 1
