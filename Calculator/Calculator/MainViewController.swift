@@ -13,11 +13,15 @@ class MainViewController: UIViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        createTitlesFor(allButtons)
+        setupUI()
     }
     
     // MARK: Methods:
+    private func setupUI() {
+        backgroundView.backgroundColor = Colors.applicationBackgroundColor
+        createTitlesFor(allButtons)
+    }
+    
     private func createTitlesFor(_ buttons: [CalcButton]) {
         for button in buttons {
             button.setTitle(button.titleToShow, for: .normal)
