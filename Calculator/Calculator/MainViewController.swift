@@ -33,7 +33,6 @@ class MainViewController: UIViewController {
     }
     
     private func setupButtonUIFor(_ buttons: [CalcButton]) {
-        createTitlesFor(buttons)
         for button in buttons {
             createTitleFor(button)
         }
