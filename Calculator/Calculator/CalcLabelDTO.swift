@@ -11,7 +11,7 @@ struct CalcLabelDTO {
   
     init(fontSize: CGFloat = 65,
          fontColor: UIColor = Colors.labelFontColorNormal,
-         backgroundColor: UIColor = Colors.applicationBackgroundColor) {
+         backgroundColor: UIColor = Colors.labelBackgroundColor) {
         self.fontSize = fontSize
         self.fontColor = fontColor
         self.backgroundColor = backgroundColor

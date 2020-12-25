@@ -5,6 +5,7 @@ struct Colors {
     
     static let labelFontColorNormal: UIColor = .white
     static let labelFontColorFrozen: UIColor = .gray
+    static let labelBackgroundColor: UIColor = Colors.applicationBackgroundColor
     
     static let buttonFontColor: UIColor = .blue
     static let buttonBorderColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
