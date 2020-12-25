@@ -9,15 +9,14 @@ struct CalcLabelDTO {
         return CalcLabelDTO()
     }
   
-    init(fontSize: CGFloat = 65,
-         fontColor: UIColor = Colors.labelFontColorNormal,
-         backgroundColor: UIColor = Colors.labelBackgroundColor) {
+    init(backgroundColor: UIColor = Colors.labelBackgroundColor,
+         fontSize: CGFloat = 65,
+         fontColor: UIColor = Colors.labelFontColorNormal) {
+        self.backgroundColor = backgroundColor
         self.fontSize = fontSize
         self.fontColor = fontColor
-        self.backgroundColor = backgroundColor
     }
-
+    let backgroundColor: UIColor
     let fontSize: CGFloat
     let fontColor: UIColor
-    let backgroundColor: UIColor
 }

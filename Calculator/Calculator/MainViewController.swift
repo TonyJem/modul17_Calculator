@@ -19,24 +19,27 @@ class MainViewController: UIViewController {
     // MARK: Methods:
     private func setupUI() {
         setupApplicationBackground()
-        setupResultLabelUI()
-        createTitlesFor(allButtons)
+        setupLabelUIFor(resultLabel)
+        setupButtonUIFor(allButtons)
+    }
+    
+    private func setupApplicationBackground() {
+        backgroundView.backgroundColor = Colors.applicationBackgroundColor
+    }
+      
+    private func setupLabelUIFor(_ label: UILabel) {
+        label.textColor = CalcLabelDTO.resultLabelActive.fontColor
+        label.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
+    }
+    
+    private func setupButtonUIFor(_ buttons: [CalcButton]) {
+        createTitlesFor(buttons)
     }
     
     private func createTitlesFor(_ buttons: [CalcButton]) {
         for button in buttons {
             button.setTitle(button.titleToShow, for: .normal)
         }
-    }
-    
-    private func setupApplicationBackground() {
-        backgroundView.backgroundColor = Colors.applicationBackgroundColor
-    }
-    
-    private func setupResultLabelUI() {
-        resultLabel.textColor = Colors.labelFontColorNormal
-        resultLabel.textColor = CalcLabelDTO.resultLabelActive.fontColor
-        resultLabel.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
     }
     
     // MARK: Actions:
