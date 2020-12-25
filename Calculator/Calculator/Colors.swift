@@ -3,8 +3,8 @@ import UIKit
 struct Colors {
     static let applicationBackgroundColor: UIColor = .black
     
-    static let labelFontColorNormal: UIColor = .white
-    static let labelFontColorFrozen: UIColor = .gray
+    static let labelFontColorActive: UIColor = .white
+    static let labelFontColorNotActive: UIColor = .gray
     static let labelBackgroundColor: UIColor = Colors.applicationBackgroundColor
     
     static let buttonFontColor: UIColor = .blue
@@ -12,6 +12,6 @@ struct Colors {
     
     static let primaryButton: UIColor = .cyan
     static let secondaryButton: UIColor = .lightGray
-    static let actionButtonNormal: UIColor = .orange
-    static let actionButtonFrozen: UIColor = UIColor(red: 239/255, green: 94/255, blue: 28/255, alpha: 1.0)
+    static let actionButtonActive: UIColor = .orange
+    static let actionButtonNotActive: UIColor = UIColor(red: 239/255, green: 94/255, blue: 28/255, alpha: 1.0)
 }
