@@ -40,6 +40,22 @@ class MainViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
     }
     
+    // MARK: - Calculation and Logic:
+    private func calculate(_ operation: BasicOperation,
+                           for operand1: Double,
+                           with operand2: Double) -> Double {
+            switch operation {
+            case .addition:
+                return operand1 + operand2
+            case .subtraction:
+                return operand1 - operand2
+            case .multiplication:
+                return operand1 * operand2
+            case .division:
+                return operand1 / operand2
+            }
+        }
+    
     // MARK: - Actions:
     @IBAction func anyButtonTapped(_ sender: CalcButton) {
         sender.showAnimatedClick()
