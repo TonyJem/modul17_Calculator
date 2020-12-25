@@ -12,16 +12,16 @@
 
 //MARK: Basic Math Operations
 "addition_button_title" = "+";
-"subtraction_button_title" = "\u{2212}";
-"multiplication_button_title" = "\u{00D7}";
-"division_button_title" = "\u{00F7}";
+"subtraction_button_title" = "\U2212";
+"multiplication_button_title" = "\U00D7";
+"division_button_title" = "\U00F7";
 
 //MARK: Advanced Math Operations
-"square_root_button_title" = "\u{221A}";
+"square_root_button_title" = "\U221A";
 "percent_button_title" = "%";
 
 //MARK: Other and Service Buttons
 "reset_button_title" = "AC";
 "equals_button_title" = "=";
 "decimal_point_button_title" = ".";
-"plus_minus_button_title" = "\u{207A}\u{2215}\u{208B}";
+"plus_minus_button_title" = "\U207A\U2215\U208B";
