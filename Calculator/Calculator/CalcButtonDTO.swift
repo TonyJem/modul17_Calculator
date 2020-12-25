@@ -1,24 +1,27 @@
 import UIKit
 
 struct CalcButtonDTO {
-    static var defaultButton: CalcButtonDTO {
-        return CalcButtonDTO()
-    }
+    let fontSize: CGFloat
+    let fontColor: UIColor
+    let backgroundColor: UIColor
+    let cornerRadius: CGFloat
+    let borderWidth: CGFloat
+    let borderColor: UIColor
     
     static var primaryButton: CalcButtonDTO {
-        return CalcButtonDTO()
+        return CalcButtonDTO(backgroundColor: Colors.primaryButton)
     }
     
     static var secondaryButton: CalcButtonDTO {
-        return CalcButtonDTO()
+        return CalcButtonDTO(backgroundColor: Colors.secondaryButton)
     }
     
     static var actionButtonActive: CalcButtonDTO {
-        return CalcButtonDTO()
+        return CalcButtonDTO(backgroundColor: Colors.actionButtonActive)
     }
     
     static var actionButtonNotActive: CalcButtonDTO {
-        return CalcButtonDTO()
+        return CalcButtonDTO(backgroundColor: Colors.actionButtonNotActive)
     }
     
     init(fontSize: CGFloat = 42,
@@ -34,11 +37,4 @@ struct CalcButtonDTO {
         self.borderWidth = borderWidth
         self.borderColor = borderColor
     }
-
-    let fontSize: CGFloat
-    let fontColor: UIColor
-    let backgroundColor: UIColor
-    let cornerRadius: CGFloat
-    let borderWidth: CGFloat
-    let borderColor: UIColor
 }
