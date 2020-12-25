@@ -47,10 +47,10 @@ class MainViewController: UIViewController {
     
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
         guard currentLabelText != "0" else {
-            currentLabelText = sender.title
+            currentLabelText = sender.explanation
             return
         }
-        currentLabelText += sender.title
+        currentLabelText += sender.explanation
     }
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
