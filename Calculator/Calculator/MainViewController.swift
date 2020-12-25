@@ -14,12 +14,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createTitlesForButtons()
-        
+        createTitlesFor(allButtons)
     }
     
     // MARK: Methods:
-    private func createTitlesForButtons(){
+    private func createTitlesFor(_ buttons: [CalcButton]) {
         for button in allButtons {
             button.setTitle(button.titleToShow, for: .normal)
         }
