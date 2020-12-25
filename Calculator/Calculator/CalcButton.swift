@@ -1,21 +1,21 @@
 import UIKit
 
 enum ButtonBackground {
-    case primaryButton
-    case secondaryButton
-    case actionButtonActive
-    case actionButtonNotActive
+    case primaryButtonBackground
+    case secondaryButtonBackground
+    case actionButtonActiveBackground
+    case actionButtonNotActiveBackground
     
     var color: UIColor {
         switch self {
-        case .primaryButton:
-            return Colors.primaryButton
-        case .secondaryButton:
-            return Colors.secondaryButton
-        case .actionButtonActive:
-            return Colors.actionButtonActive
-        case .actionButtonNotActive:
-            return Colors.actionButtonNotActive
+        case .primaryButtonBackground:
+            return CalcButtonDTO.primaryButton.backgroundColor
+        case .secondaryButtonBackground:
+            return CalcButtonDTO.secondaryButton.backgroundColor
+        case .actionButtonActiveBackground:
+            return CalcButtonDTO.actionButtonActive.backgroundColor
+        case .actionButtonNotActiveBackground:
+            return CalcButtonDTO.actionButtonNotActive.backgroundColor
         }
     }
 }

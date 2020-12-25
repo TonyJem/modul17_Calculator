@@ -46,20 +46,8 @@ class MainViewController: UIViewController {
             button.setTitle(button.titleToShow, for: .normal)
     }
     
-    private func setPrimaryButtonBackgroudFor(_ button: CalcButton) {
-        button.backgroundColor = CalcButtonDTO.primaryButton.backgroundColor
-    }
-    
-    private func setSecondaryButtonBackgroudFor(_ button: CalcButton) {
-        button.backgroundColor = CalcButtonDTO.secondaryButton.backgroundColor
-    }
-    
-    private func setActionButtonActiveBackgroudFor(_ button: CalcButton) {
-        button.backgroundColor = CalcButtonDTO.actionButtonActive.backgroundColor
-    }
-    
-    private func setActionButtonNotActiveFor(_ button: CalcButton) {
-        button.backgroundColor = CalcButtonDTO.actionButtonNotActive.backgroundColor
+    private func setBackground(for button: CalcButton, with background: ButtonBackground) {
+        button.backgroundColor = background.color
     }
     
     // MARK: Actions:
