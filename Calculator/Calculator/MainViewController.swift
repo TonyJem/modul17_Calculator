@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     // MARK: Methods:
     private func createTitlesFor(_ buttons: [CalcButton]) {
-        for button in allButtons {
+        for button in buttons {
             button.setTitle(button.titleToShow, for: .normal)
         }
     }
