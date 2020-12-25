@@ -1,25 +1,5 @@
 import UIKit
 
-enum ButtonBackground {
-    case primaryButtonBackground
-    case secondaryButtonBackground
-    case actionButtonActiveBackground
-    case actionButtonNotActiveBackground
-    
-    var color: UIColor {
-        switch self {
-        case .primaryButtonBackground:
-            return CalcButtonDTO.primaryButton.backgroundColor
-        case .secondaryButtonBackground:
-            return CalcButtonDTO.secondaryButton.backgroundColor
-        case .actionButtonActiveBackground:
-            return CalcButtonDTO.actionButtonActive.backgroundColor
-        case .actionButtonNotActiveBackground:
-            return CalcButtonDTO.actionButtonNotActive.backgroundColor
-        }
-    }
-}
-
 class CalcButton: UIButton {
     var titleToShow: String { setTitleFor(self) }
     
