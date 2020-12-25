@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     // MARK: Methods:
     private func setupUI() {
         backgroundView.backgroundColor = Colors.applicationBackgroundColor
-        createResultLabelUI()
+        setupResultLabelUI()
         createTitlesFor(allButtons)
     }
     
@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func createResultLabelUI() {
+    private func setupResultLabelUI() {
         resultLabel.textColor = Colors.labelFontColorNormal
         resultLabel.textColor = CalcLabelDTO.resultLabelActive.fontColor
         resultLabel.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
