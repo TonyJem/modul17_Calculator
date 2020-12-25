@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
         button.backgroundColor = CalcButtonDTO.actionButtonActive.backgroundColor
     }
     
-    private func setactionButtonNotActiveFor(_ button: CalcButton) {
+    private func setActionButtonNotActiveFor(_ button: CalcButton) {
         button.backgroundColor = CalcButtonDTO.actionButtonNotActive.backgroundColor
     }
     
