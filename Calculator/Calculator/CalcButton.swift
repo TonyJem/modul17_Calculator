@@ -1,24 +1,7 @@
 import UIKit
 
-enum ButtonColorScheme {
-    case primaryButton, secondaryButton, actionButtonNormal
-
-    var buttonBackgroundColor: UIColor {
-        switch self {
-        case .primaryButton:
-            return Colors.primaryButton
-        case .secondaryButton:
-            return Colors.secondaryButton      
-        case .actionButtonNormal:
-            return Colors.actionButtonNormal
-        }
-    }
-}
-
 class CalcButton: UIButton {
     var titleToShow: String { setTitleFor(self) }
-    
-    private var colorScheme: ButtonColorScheme = .primaryButton
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
