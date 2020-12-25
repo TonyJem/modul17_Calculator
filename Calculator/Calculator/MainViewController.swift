@@ -11,10 +11,16 @@ class MainViewController: UIViewController {
     
     // MARK: Properties:
     
+    private var currentLabelText: String = "" {
+        didSet {
+            resultLabel.text = currentLabelText
+        }
+    }
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentLabelText = "0"
         setupUI()
     }
     
@@ -40,6 +46,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
+        guard currentLabelText != "0" else {
+            currentLabelText = sender.title
+            return
+        }
+        currentLabelText += sender.title
     }
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
