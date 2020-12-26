@@ -114,15 +114,18 @@ extension MainViewController {
 
     private func setButtonsUI(for buttons: [CalcButton], with dto: CalcButtonDTO) {
         for button in buttons {
-            createTitle(for: button)
+            setProperties(for: button)
             setFont(for: button, with: dto)
             setBackground(for: button, with: dto)
             setBorders(for: button, with: dto)
         }
     }
     
-    private func createTitle(for button: CalcButton) {
-            button.setTitle(button.title, for: .normal)
+    private func setProperties(for button: CalcButton) {
+        let buttonProperties = button.setProperties(for: button)
+        button.title = buttonProperties.title
+        button.explanation = buttonProperties.explanation
+        button.setTitle(button.title, for: .normal)
     }
     
     private func setFont(for button: CalcButton, with dto: CalcButtonDTO) {
