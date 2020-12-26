@@ -44,7 +44,7 @@
 
 //MARK: Advanced Math Operations
 "square_root_button_title" = "\U221A";
-"square_root_button_explanation" = "squareRoot";
+"square_root_button_explanation" = "squareroot";
 
 "percent_button_title" = "%";
 "percent_button_explanation" = "percent";
@@ -57,7 +57,7 @@
 "equals_button_explanation" = "equals";
 
 "decimal_point_button_title" = ".";
-"decimal_point_button_explanation" = "decimalPoint";
+"decimal_point_button_explanation" = "decimalpoint";
 
 "plus_minus_button_title" = "\U207A\U2215\U208B";
-"plus_minus_button_explanation" = "plusMinus";
+"plus_minus_button_explanation" = "plusminus";
