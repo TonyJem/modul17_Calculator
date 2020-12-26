@@ -86,10 +86,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
-        print("🔴 Reset button was tapped !")
         currentLabelText = "0"
         resultLabelIsEnabled = true
         currentOperation = nil
+        operandFirst = 0
     }
     
     @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
