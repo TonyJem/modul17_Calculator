@@ -127,6 +127,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func equalsButtonTapped(_ sender: CalcButton) {
+        guard let calledOperation = currentOperation else { return }
+        
+        guard resultLabelIsEnabled else {
+            currentOperation = nil
+            operandFirst = Double(currentLabelText)!
+            return }
+        
+        let calculationResult = calculate(calledOperation, for: operandFirst, with: Double(currentLabelText)!)
+        currentLabelText = String(calculationResult)
+        currentOperation = nil
+        resultLabelIsEnabled = false
+        operandFirst = Double(currentLabelText)!
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
