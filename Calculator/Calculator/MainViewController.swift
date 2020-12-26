@@ -71,6 +71,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Actions:
     @IBAction func anyButtonTapped(_ sender: CalcButton) {
+        unlock(actionButtons)
         sender.showAnimatedClick()
     }
     
@@ -95,9 +96,16 @@ class MainViewController: UIViewController {
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
     }
     
+    private func unlock(_ buttons: [CalcButton]) {
+        for button in buttons {
+            button.isLocked = false
+        }
+    }
+    
     @IBAction func basicOperationButtonTapped(_ sender: CalcButton) {
         guard let operation = sender.basicOperation else { return } // TODO: Throw Error if returned
         resultLabelIsEnabled = false
+        sender.isLocked = true
         if currentOperation == nil {
             currentOperation = operation
             print("🟢 Tapped operation is: \(operation)")
