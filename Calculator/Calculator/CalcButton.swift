@@ -1,8 +1,10 @@
 import UIKit
 
 class CalcButton: UIButton {
-    var title: String { setTitle(for: self).buttonTitle }
-    var explanation: String { setTitle(for: self).buttonExplanation }
+    
+    var title: String = ""
+    var explanation: String = ""
+    
     var basicOperation: BasicOperation? {
         switch explanation {
         case __("addition_button_explanation"):
