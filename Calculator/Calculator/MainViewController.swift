@@ -80,6 +80,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func basicOperationButtonTapped(_ sender: CalcButton) {
+        if let operation = sender.basicOperation {
+            switch operation {
+            case .addition:
+                print("🟢 Adition tapped")
+            case .subtraction:
+                print("🟢 Subtraction tapped")
+            case .multiplication:
+                print("🟢 Multiplication tapped")
+            case .division:
+                print("🟢 Division tapped")
+            }
+        }
     }
     
     @IBAction func equalsButtonTapped(_ sender: CalcButton) {
