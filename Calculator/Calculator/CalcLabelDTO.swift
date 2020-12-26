@@ -1,12 +1,26 @@
 import UIKit
 
+enum labelDTO {
+    case resultLabelActiveDTO
+    case resultLabelNotActiveDTO
+    
+    var dto: CalcLabelDTO {
+        switch self {
+        case .resultLabelActiveDTO:
+            return CalcLabelDTO.resultLabelActiveDTO
+        case .resultLabelNotActiveDTO:
+            return CalcLabelDTO.resultLabelNotActiveDTO
+        }
+    }
+}
+
 struct CalcLabelDTO {
-    static var resultLabelActive: CalcLabelDTO {
+    static var resultLabelActiveDTO: CalcLabelDTO {
         return CalcLabelDTO()
     }
     
-    static var resultLabelNotActive: CalcLabelDTO {
-        return CalcLabelDTO()
+    static var resultLabelNotActiveDTO: CalcLabelDTO {
+        return CalcLabelDTO(fontColor: Colors.labelFontColorNotActive)
     }
   
     init(backgroundColor: UIColor = Colors.labelBackgroundColor,
