@@ -142,6 +142,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
+        guard !currentLabelText.contains(".") else { return }
+        currentLabelText += "."
     }
     
     @IBAction func plusMinusButtonTapped(_ sender: CalcButton) {
