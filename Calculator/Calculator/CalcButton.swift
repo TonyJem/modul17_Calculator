@@ -16,7 +16,7 @@ class CalcButton: UIButton {
         case __("division_button_explanation"):
             return .division
         default:
-            return .addition
+            return nil
         }
     }
     
