@@ -5,6 +5,16 @@ class CalcButton: UIButton {
     var title: String = ""
     var explanation: String = ""
     
+    var isLocked: Bool = false {
+        didSet {
+            if isLocked {
+                setOwnBackground(with: .actionButtonNotActiveDTO)
+            } else {
+                setOwnBackground(with: .actionButtonActiveDTO)
+            }
+        }
+    }
+    
     var basicOperation: BasicOperation? {
         switch explanation {
         case __("addition_button_explanation"):
