@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
     // MARK: Properties:
     var currentOperation: BasicOperation? = nil
     var operandFirst: Double = 0
-    var operandSecond: Double = 0
     
     var resultLabelIsEnabled: Bool = true {
         didSet {
@@ -54,9 +53,7 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Calculation and Logic:
-    private func calculate(_ operation: BasicOperation,
-                           for operand1: Double,
-                           with operand2: Double) -> Double {
+    private func calculate(_ operation: BasicOperation, for operand1: Double, with operand2: Double) -> Double {
             switch operation {
             case .addition:
                 return operand1 + operand2
@@ -68,7 +65,6 @@ class MainViewController: UIViewController {
                 return operand1 / operand2
             }
         }
-    
     // MARK: - Actions:
     @IBAction func anyButtonTapped(_ sender: CalcButton) {
         unlock(actionButtons)
@@ -76,6 +72,12 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func numericButtonTapped(_ sender: CalcButton) {
+        guard resultLabelIsEnabled else {
+            resultLabelIsEnabled = true
+            currentLabelText = sender.explanation
+            return
+        }
+        
         guard currentLabelText != "0" else {
             currentLabelText = sender.explanation
             return
@@ -103,32 +105,25 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func basicOperationButtonTapped(_ sender: CalcButton) {
-        guard let operation = sender.basicOperation else { return } // TODO: Throw Error if returned
-        resultLabelIsEnabled = false
+        guard let calledOperation = sender.basicOperation else { return } // TODO: Throw Error if returned
         sender.isLocked = true
-        if currentOperation == nil {
-            currentOperation = operation
-            print("🟢 Tapped operation is: \(operation)")
-            print("🟢 There no previuose operations")
-            
-            if let value = Double(currentLabelText) {
-                operandFirst = value
-            } else {
-                // TODO: Throw Error if can't unwrap
-            }
+        
+        guard resultLabelIsEnabled else {
+            self.currentOperation = calledOperation
             return
-            
-        } else {
-            print("🟡 Tapped operation is: \(operation)")
-            
-            if let currentOperation = self.currentOperation {
-                print("🟡 Previuose operation was: \(currentOperation)")
-            } else {
-                // TODO: Throw Error if can't unwrap
-            }
-            
-            currentOperation = operation
         }
+        
+        resultLabelIsEnabled = false
+        
+        guard let currentOperation = self.currentOperation else {
+            self.currentOperation = calledOperation
+            operandFirst = Double(currentLabelText)!
+            return
+        }
+        
+        let calculationResult = calculate(currentOperation, for: operandFirst, with: Double(currentLabelText)!)
+        operandFirst = calculationResult
+        currentLabelText = String(calculationResult)
     }
     
     @IBAction func equalsButtonTapped(_ sender: CalcButton) {
