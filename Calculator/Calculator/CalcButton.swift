@@ -3,6 +3,20 @@ import UIKit
 class CalcButton: UIButton {
     var title: String { setTitle(for: self).buttonTitle }
     var explanation: String { setTitle(for: self).buttonExplanation }
+    var basicOperation: BasicOperation? {
+        switch explanation {
+        case __("addition_button_explanation"):
+            return .addition
+        case __("subtraction_button_explanation"):
+            return .subtraction
+        case __("multiplication_button_explanation"):
+            return .multiplication
+        case __("division_button_explanation"):
+            return .division
+        default:
+            return .addition
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
