@@ -10,6 +10,19 @@ class MainViewController: UIViewController {
     @IBOutlet private var actionButtons: [CalcButton]!
     
     // MARK: Properties:
+    var currentOperation: BasicOperation? = nil
+    var operandFirst: Double = 0
+    var operandSecond: Double = 0
+    
+    var resultLabelIsEnabled: Bool = true {
+        didSet {
+            guard resultLabelIsEnabled else {
+                setupLabelUI(for: resultLabel, with: .resultLabelNotActiveDTO)
+                return
+            }
+            setupLabelUI(for: resultLabel, with: .resultLabelActiveDTO)
+        }
+    }
     
     private var currentLabelText: String = "" {
         didSet {
@@ -27,7 +40,7 @@ class MainViewController: UIViewController {
     // MARK: - SetupUI Methods:
     private func setupUI() {
         setupViewUI(for: backgroundView)
-        setupLabelUI(for: resultLabel)
+        resultLabelIsEnabled = true
         setupAllButtonsUI()
     }
     
@@ -35,9 +48,9 @@ class MainViewController: UIViewController {
         view.backgroundColor = Colors.applicationBackgroundColor
     }
       
-    private func setupLabelUI(for label: UILabel) {
-        label.textColor = CalcLabelDTO.resultLabelActive.fontColor
-        label.font = UIFont.systemFont(ofSize: CalcLabelDTO.resultLabelActive.fontSize)
+    private func setupLabelUI(for label: UILabel, with dto: CalcLabelDTO) {
+        label.textColor = dto.fontColor
+        label.font = UIFont.systemFont(ofSize: dto.fontSize)
     }
     
     // MARK: - Calculation and Logic:
@@ -71,6 +84,8 @@ class MainViewController: UIViewController {
     
     @IBAction func resetButtonTapped(_ sender: CalcButton) {
         currentLabelText = "0"
+        resultLabelIsEnabled = true
+        currentOperation = nil
     }
     
     @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
@@ -84,6 +99,19 @@ class MainViewController: UIViewController {
             switch operation {
             case .addition:
                 print("🟢 Adition tapped")
+                resultLabelIsEnabled = false
+                guard currentOperation != nil else {
+                    currentOperation = operation
+                    print("Current operation is: \(operation)")
+                    if let value = Double(currentLabelText) {
+                        operandFirst = value
+                    } else {
+//              TODO: Throw Error if can't unwrap
+                    }
+                    return
+                }
+                print("Operation: \(self.currentOperation ?? .multiplication) was already selected last time!")
+                
             case .subtraction:
                 print("🟢 Subtraction tapped")
             case .multiplication:
