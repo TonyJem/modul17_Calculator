@@ -145,6 +145,15 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func plusMinusButtonTapped(_ sender: CalcButton) {
+        guard Double(currentLabelText)! != 0 else { return }
+        
+        let newValue = -1 * Double(currentLabelText)!
+        currentLabelText = String(newValue)
+        
+        guard resultLabelIsEnabled else {
+            operandFirst = newValue
+            return
+        }
     }
 }
 
