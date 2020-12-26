@@ -23,6 +23,10 @@ class CalcButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    private func setOwnBackground(with dto: CalcButtonDTO) {
+        self.backgroundColor = dto.backgroundColor
+    }
 }
 
 // MARK: - Set Button title from Localzable.stings
