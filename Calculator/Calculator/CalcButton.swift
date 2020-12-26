@@ -27,56 +27,76 @@ class CalcButton: UIButton {
 
 // MARK: - Set Button title from Localzable.stings
 extension CalcButton {
-    private func setTitle(for button: CalcButton) -> (buttonTitle: String, buttonExplanation: String) {
+    func setProperties(for button: CalcButton) -> (title: String, explanation: String) {
         if let buttonTitle = button.title(for: .normal) {
             switch buttonTitle {
-            case "0":
+            case __("number_0_button_explanation"):
                 return (__("number_0_button_title"), __("number_0_button_explanation"))
-            case "1":
+                
+            case __("number_1_button_explanation"):
                 return (__("number_1_button_title"), __("number_1_button_explanation"))
-            case "2":
+                
+            case __("number_2_button_explanation"):
                 return (__("number_2_button_title"), __("number_2_button_explanation"))
-            case "3":
+                
+            case __("number_3_button_explanation"):
                 return (__("number_3_button_title"), __("number_3_button_explanation"))
-            case "4":
+                
+            case __("number_4_button_explanation"):
                 return (__("number_4_button_title"), __("number_4_button_explanation"))
-            case "5":
+                
+            case __("number_5_button_explanation"):
                 return (__("number_5_button_title"), __("number_5_button_explanation"))
-            case "6":
+                
+            case __("number_6_button_explanation"):
                 return (__("number_6_button_title"), __("number_6_button_explanation"))
-            case "7":
+                
+            case __("number_7_button_explanation"):
                 return (__("number_7_button_title"), __("number_7_button_explanation"))
-            case "8":
+                
+            case __("number_8_button_explanation"):
                 return (__("number_8_button_title"), __("number_8_button_explanation"))
-            case "9":
+                
+            case __("number_9_button_explanation"):
                 return (__("number_9_button_title"), __("number_9_button_explanation"))
-            case "addition":
+                
+            case __("addition_button_explanation"):
                 return (__("addition_button_title"), __("addition_button_explanation"))
-            case "subtraction":
+                
+            case __("subtraction_button_explanation"):
                 return (__("subtraction_button_title"), __("subtraction_button_explanation"))
-            case "multiplication":
+                
+            case __("multiplication_button_explanation"):
                 return (__("multiplication_button_title"), __("multiplication_button_explanation"))
-            case "division":
+                
+            case __("division_button_explanation"):
                 return (__("division_button_title"), __("division_button_explanation"))
-            case "squareroot":
+                
+            case __("square_root_button_explanation"):
                 return (__("square_root_button_title"), __("square_root_button_explanation"))
-            case "percent":
+                
+            case __("percent_button_explanation"):
                 return (__("percent_button_title"), __("percent_button_explanation"))
-            case "reset":
+                
+            case __("reset_button_explanation"):
                 return (__("reset_button_title"), __("reset_button_explanation"))
-            case "equals":
+                
+            case __("equals_button_explanation"):
                 return (__("equals_button_title"), __("equals_button_explanation"))
-            case "decimalpoint":
+                
+            case __("decimal_point_button_explanation"):
                 return (__("decimal_point_button_title"), __("decimal_point_button_explanation"))
-            case "plusminus":
+                
+            case __("plus_minus_button_explanation"):
                 return (__("plus_minus_button_title"), __("plus_minus_button_explanation"))
+                
             default:
                 //  TODO: Create Error handling, when current button title was not found in current button titles list
-                return ("Error2", "Error2")
+                return ("Error1.1", "Error1.2")
             }
         }
         //  TODO: Create Error handling, when buttons title is nil
-        return ("Error1", "Error1")
+        return ("Error2.1", "Error2.2")
     }
 }
 
