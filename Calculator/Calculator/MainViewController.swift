@@ -95,30 +95,30 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func basicOperationButtonTapped(_ sender: CalcButton) {
-        if let operation = sender.basicOperation {
-            switch operation {
-            case .addition:
-                print("🟢 Adition tapped")
-                resultLabelIsEnabled = false
-                guard currentOperation != nil else {
-                    currentOperation = operation
-                    print("Current operation is: \(operation)")
-                    if let value = Double(currentLabelText) {
-                        operandFirst = value
-                    } else {
-//              TODO: Throw Error if can't unwrap
-                    }
-                    return
-                }
-                print("Operation: \(self.currentOperation ?? .multiplication) was already selected last time!")
-                
-            case .subtraction:
-                print("🟢 Subtraction tapped")
-            case .multiplication:
-                print("🟢 Multiplication tapped")
-            case .division:
-                print("🟢 Division tapped")
+        guard let operation = sender.basicOperation else { return } // TODO: Throw Error if returned
+        resultLabelIsEnabled = false
+        if currentOperation == nil {
+            currentOperation = operation
+            print("🟢 Tapped operation is: \(operation)")
+            print("🟢 There no previuose operations")
+            
+            if let value = Double(currentLabelText) {
+                operandFirst = value
+            } else {
+                // TODO: Throw Error if can't unwrap
             }
+            return
+            
+        } else {
+            print("🟡 Tapped operation is: \(operation)")
+            
+            if let currentOperation = self.currentOperation {
+                print("🟡 Previuose operation was: \(currentOperation)")
+            } else {
+                // TODO: Throw Error if can't unwrap
+            }
+            
+            currentOperation = operation
         }
     }
     
