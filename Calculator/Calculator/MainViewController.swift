@@ -120,6 +120,14 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
+        var newValue: Double
+        if currentOperation == nil {
+            newValue = Double(currentLabelText)! / 100
+        } else {
+            newValue = operandFirst / 100 * Double(currentLabelText)!
+           }
+        resultLabelIsEnabled = false
+        currentLabelText = String(newValue)
     }
     
     private func unlock(_ buttons: [CalcButton]) {
