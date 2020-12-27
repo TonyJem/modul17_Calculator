@@ -20,7 +20,7 @@ Modul_7 Assignment (iOS development cource by https://skillfactory.ru)
 
 Так выглядит стандартное приложение для простых расчётов на iPhone:
 
-<img src="/readMeImages/example0.jpg" width="33%">
+<img src="/readMeImages/example0.png" width="33%">
 <br>
 
 По скриншоту видно, что приложение состоит из одного экрана, но при этом каждой кнопке соответствует собственный функционал: 
