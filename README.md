@@ -3,7 +3,7 @@ Modul_7 Assignment (iOS development cource by https://skillfactory.ru)
  
 [Description](#task-description)
 
-[User Data](#user-data)
+[Requirements](#requirements)
 
 [Enums](#enums)
 
@@ -35,9 +35,7 @@ Modul_7 Assignment (iOS development cource by https://skillfactory.ru)
 Суть задания — научиться строить интерфейс приложения  «Калькулятор».
 
  
-##  User Data:
-
-Требования:
+## Requirements:
 
 1. Используйте AutoLayout, чтобы была возможность переворачивать экран и пользоваться приложением в ландшафтном режиме.
 2. Используйте StackView для группировки элементов — так гораздо удобнее, чем расставлять Constraints на каждый элемент.
