@@ -13,14 +13,14 @@ Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
 
 ## Task Description:
 
-<img src="/readMeImages/hero.svg" width="33%">
+<img src="/readMeImages/hero.svg" width="40%">
 <br>
 
 В рамках практической работы мы создадим приложение «Калькулятор».
 
 Так выглядит стандартное приложение для простых расчётов на iPhone:
 
-<img src="/readMeImages/example0.png" width="33%">
+<img src="/readMeImages/example0.png" width="20%">
 <br>
 
 По скриншоту видно, что приложение состоит из одного экрана, но при этом каждой кнопке соответствует собственный функционал: 
@@ -46,10 +46,10 @@ P.S.: Собственное решение помогает лучше усво
 
 ## Estimated result:
 
-<img src="/readMeImages/example1.png" width="33%">
+<img src="/readMeImages/example1.png" width="25%">
 <br>
 
-<img src="/readMeImages/example2.png" width="50%">
+<img src="/readMeImages/example2.png" width="60%">
 <br>
 
 Подсказки:
