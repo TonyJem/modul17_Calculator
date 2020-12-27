@@ -1,5 +1,5 @@
 # ПРИЛОЖЕНИЕ «КАЛЬКУЛЯТОР»
-Assignment for Modul_7 in iOS development cource by https://skillfactory.ru)
+Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
  
 [Description](#task-description)
 
