@@ -5,7 +5,7 @@ Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
 
 [Requirements](#requirements)
 
-[Enums](#enums)
+[Estimated result](#estimated-result)
 
 [ATM Class](#atm-class)
 
@@ -44,12 +44,12 @@ Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
 5. Важно, чтобы приложение выполняло свою прямую функцию — приём двух чисел для выполнения математических операций над ними и возвращение результата.
 P.S.: Собственное решение помогает лучше усвоить материал.
 
-Примерный результат:
+## Estimated result:
 
 <img src="/readMeImages/example1.png" width="33%">
 <br>
 
-<img src="/readMeImages/example2.png" width="33%">
+<img src="/readMeImages/example2.png" width="50%">
 <br>
 
 Подсказки:
