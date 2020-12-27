@@ -46,10 +46,7 @@ P.S.: Собственное решение помогает лучше усво
 
 ## Estimated result:
 
-<img src="/readMeImages/example1.png" width="30%">
-<br>
-
-<img src="/readMeImages/example2.png" width="60%">
+<img src="/readMeImages/example1.png" width="30%"> <img src="/readMeImages/example2.png" width="60%">
 <br>
 
 ## Hints:
