@@ -23,8 +23,24 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func turnUItoErrorMode() {
+        resultLabel.text = "Error!"
+        /* TODO: Add more functionality for errorMode:
+         disable all buttons,
+         Turn reset button background to special color
+         enable only Reset button
+         when Reset is pressed, all apearance and internal variable fully reseting
+        */
+    }
+    
     private var currentLabelText: String = "" {
         didSet {
+            guard currentLabelText != "nan",
+                  currentLabelText != "inf"
+            else {
+                turnUItoErrorMode()
+                return
+            }
             resultLabel.text = currentLabelText
         }
     }
