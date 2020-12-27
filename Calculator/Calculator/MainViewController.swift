@@ -109,6 +109,14 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
+        let newValue = Double(currentLabelText)!.squareRoot()
+        currentLabelText = String(newValue)
+        
+        guard resultLabelIsEnabled else { return }
+        resultLabelIsEnabled = false
+        
+        guard currentOperation == nil else { return }
+        operandFirst = newValue
     }
     
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
