@@ -142,7 +142,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
-        guard !currentLabelText.contains(".") else { return }
+        guard resultLabelIsEnabled, !currentLabelText.contains(".") else { return }
         currentLabelText += "."
     }
     
