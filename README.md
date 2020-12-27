@@ -7,7 +7,7 @@ Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
 
 [Estimated result](#estimated-result)
 
-[ATM Class](#atm-class)
+[Hints](#hints)
 
 [Server Protocol](#server-protocol)
 
@@ -20,7 +20,7 @@ Assignment for Modul #7 in iOS development cource by https://skillfactory.ru)
 
 Так выглядит стандартное приложение для простых расчётов на iPhone:
 
-<img src="/readMeImages/example0.png" width="20%">
+<img src="/readMeImages/example0.png" width="25%">
 <br>
 
 По скриншоту видно, что приложение состоит из одного экрана, но при этом каждой кнопке соответствует собственный функционал: 
@@ -46,13 +46,13 @@ P.S.: Собственное решение помогает лучше усво
 
 ## Estimated result:
 
-<img src="/readMeImages/example1.png" width="25%">
+<img src="/readMeImages/example1.png" width="30%">
 <br>
 
 <img src="/readMeImages/example2.png" width="60%">
 <br>
 
-Подсказки:
+## Hints:
 
 Подсказка №1
 Простой калькулятор обычно работает с тремя числами: два числа берёт на вход, а третье отдаёт как результат действий над двумя введёнными числами.
