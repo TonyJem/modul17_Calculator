@@ -1,4 +1,4 @@
-# ПРИЛОЖЕНИЕ «КАЛЬКУЛЯТОР»
+# iOS App «Calculator»
 Assignment for Modul #7 in iOS development cource by [SkilFactory](https://skillfactory.ru)
  
 [Description](#task-description)
