@@ -157,6 +157,7 @@ class MainViewController: UIViewController {
         currentLabelText = String(calculationResult)
         resultLabelIsEnabled = false
         operandFirst = Double(currentLabelText)!
+        currentOperation = nil
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
