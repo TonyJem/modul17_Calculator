@@ -3,7 +3,7 @@ Assignment for Modul #7 in iOS development cource by [SkilFactory](https://skill
 
 [Implementation and screenshots](#implementation-and-screenshots)
 
-[Description](#task-description)
+[Task description](#task-description)
 
 [Requirements](#requirements)
 
