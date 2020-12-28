@@ -115,10 +115,13 @@ P.S.: Собственное решение помогает лучше усво
 ## Implementation and screenshots:
 
 - [x] 1. Присутствуют десять числовых кнопок, точка и кнопки с действиями над числами:
-<img src="/readMeImages/screen01.png" width="33%">
+<img src="/readMeImages/screen01.png" width="25%">
+<br>
+<br>
 
 - [x] 2. `<AutoLayout>` настроен так, чтобы приложение работало как в портретном, так и в ландшафтном режиме **без** интерфейсных ошибок:
 <img src="/readMeImages/screen02.gif" width="33%">
+<br>
 <br>
 
 - [x] 3. Реализовано решение с двумя типами данных:
