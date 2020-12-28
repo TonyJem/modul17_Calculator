@@ -27,7 +27,7 @@ Assignment for Modul #7 in iOS development cource by [SkilFactory](https://skill
 
 - [x] 3. Реализовано решение с двумя типами данных:
 
-Variable `<currentLabelTextNumeric>` holds `<currentLabelText>`'s value as `<Double>` and is updated each moment as `<currentLabelText>` text value is changing:
+Variable `<currentLabelTextNumeric>` is `<Double>` and holds converted from `<String>` value of `<currentLabelText>`'s and is updated each moment as `<currentLabelText>` text value is changing:
 ```swift
     var currentLabelTextNumeric: Double = 0
     
