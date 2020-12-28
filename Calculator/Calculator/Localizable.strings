@@ -61,3 +61,6 @@
 
 "plus_minus_button_title" = "\U207A\U2215\U208B";
 "plus_minus_button_explanation" = "plusminus";
+
+//MARK: Errors
+"error_on_screen" = "Error!";

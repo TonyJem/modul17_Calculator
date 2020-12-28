@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     }
     
     private func turnUItoErrorMode() {
-        resultLabel.text = "Error!"
+        resultLabel.text = __("error_on_screen")
         /* TODO: Add more functionality for errorMode:
          disable all buttons,
          Turn reset button background to special color
