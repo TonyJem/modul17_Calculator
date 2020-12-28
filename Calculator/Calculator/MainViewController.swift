@@ -110,6 +110,7 @@ class MainViewController: UIViewController {
         resultLabelIsEnabled = true
         currentOperation = nil
         operandFirst = 0
+        operandSecond = 0
     }
     
     @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
