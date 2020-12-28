@@ -123,7 +123,7 @@ class MainViewController: UIViewController {
         }
 
         resultLabelIsEnabled = false
-        currentLabelText = String(newValue)
+        currentLabelText = newValue.cutDotZeroEnd()
     }
     
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
@@ -136,7 +136,7 @@ class MainViewController: UIViewController {
             operandSecond = newValue
            }
         resultLabelIsEnabled = false
-        currentLabelText = String(newValue)
+        currentLabelText = newValue.cutDotZeroEnd()
     }
     
     private func unlock(_ buttons: [CalcButton]) {
@@ -175,7 +175,7 @@ class MainViewController: UIViewController {
         let calculationResult = calculate(calledOperation, for: operandFirst, with: operandSecond)
         operandFirst = calculationResult
         resultLabelIsEnabled = false
-        currentLabelText = String(calculationResult)
+        currentLabelText = calculationResult.cutDotZeroEnd()
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
@@ -187,7 +187,7 @@ class MainViewController: UIViewController {
         guard currentLabelTextNumeric != 0 else { return }
         
         let newValue = -1 * currentLabelTextNumeric
-        currentLabelText = String(newValue)
+        currentLabelText = newValue.cutDotZeroEnd()
         
         guard resultLabelIsEnabled else {
             operandFirst = newValue
@@ -233,5 +233,13 @@ extension MainViewController {
         button.layer.borderWidth = dto.borderWidth
         button.layer.borderColor = dto.borderColor.cgColor
         button.layer.cornerRadius = dto.cornerRadius
+    }
+}
+
+extension Double {
+    func cutDotZeroEnd() -> String {
+        let numberTexted = String(self)
+        guard numberTexted.hasSuffix(".0") else { return numberTexted }
+        return String(numberTexted.dropLast(2))
     }
 }
