@@ -126,6 +126,38 @@ P.S.: Собственное решение помогает лучше усво
 
 - [x] 3. Реализовано решение с двумя типами данных:
 
+Variable `<currentLabelTextNumeric>` holds `<currentLabelText>`'s value as `<Double>` and is updated each moment as `<currentLabelText>` text value is changing:
+```swift
+    var currentLabelTextNumeric: Double = 0
+    
+    private var currentLabelText: String = "" {
+        didSet {
+            guard currentLabelText != "nan",
+                  currentLabelText != "inf"
+            else {
+                turnUItoErrorMode()
+                return
+            }
+            resultLabel.text = currentLabelText
+            currentLabelTextNumeric = Double(currentLabelText) ?? 0
+        }
+    }
+```
+<br>
+
+`<Extention>` for Type `<Double>` enables to convert any `<Double>` in any code place to `<String>` and removes `<".0">` from the end of that `<String>`:
+```swift
+extension Double {
+    func cutDotZeroEnd() -> String {
+        let numberTexted = String(self)
+        guard numberTexted.hasSuffix(".0") else { return numberTexted }
+        return String(numberTexted.dropLast(2))
+    }
+}
+```
+<br>
+<br>
+
 - [x] 4. Интерфейс по собственной задумке:
 
 - [x] 5. Каждый ряд кнопок — `<StackView>` из кнопок:
