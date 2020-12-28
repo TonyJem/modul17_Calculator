@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     // MARK: Properties:
     var currentOperation: BasicOperation? = nil
     var operandFirst: Double = 0
+    var operandSecond: Double = 0
     
     var resultLabelIsEnabled: Bool = true {
         didSet {
@@ -147,25 +148,26 @@ class MainViewController: UIViewController {
         
         resultLabelIsEnabled = false
         
-        guard let currentOperation = self.currentOperation else {
-            self.currentOperation = calledOperation
+        guard currentOperation != nil else {
             operandFirst = Double(currentLabelText)!
+            currentOperation = calledOperation
             return
         }
-        
-        let calculationResult = calculate(currentOperation, for: operandFirst, with: Double(currentLabelText)!)
-        operandFirst = calculationResult
-        currentLabelText = String(calculationResult)
+        operandSecond = Double(currentLabelText)!
+        equalsButtonTapped(sender)
     }
     
     @IBAction func equalsButtonTapped(_ sender: CalcButton) {
         guard let calledOperation = currentOperation else { return }
         
-        let calculationResult = calculate(calledOperation, for: operandFirst, with: Double(currentLabelText)!)
-        currentLabelText = String(calculationResult)
+        if resultLabelIsEnabled {
+            operandSecond = Double(currentLabelText)!
+        }
+        
+        let calculationResult = calculate(calledOperation, for: operandFirst, with: operandSecond)
+        operandFirst = calculationResult
         resultLabelIsEnabled = false
-        operandFirst = Double(currentLabelText)!
-        currentOperation = nil
+        currentLabelText = String(calculationResult)
     }
     
     @IBAction func decimalPointButtonTapped(_ sender: CalcButton) {
