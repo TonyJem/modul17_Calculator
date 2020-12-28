@@ -83,12 +83,12 @@ struct Colors {
 <br>
 
 - [x] 5. Каждый ряд кнопок — `<StackView>` из кнопок:
-<img src="/readMeImages/screen05.png" width="33%">
+<img src="/readMeImages/screen05.png" width="40%">
 <br>
 <br>
 
 - [x] 6. Все элементы интерфейса помещены в `<StackView>`:
-<img src="/readMeImages/screen06.png" width="33%">
+<img src="/readMeImages/screen06.png" width="40%">
 <br>
 <br>
 
