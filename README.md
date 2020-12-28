@@ -1,6 +1,8 @@
 # iOS App «Calculator»
 Assignment for Modul #7 in iOS development cource by [SkilFactory](https://skillfactory.ru)
- 
+
+[Implementation and screenshots](#implementation-and-screenshots)
+
 [Description](#task-description)
 
 [Requirements](#requirements)
@@ -11,7 +13,67 @@ Assignment for Modul #7 in iOS development cource by [SkilFactory](https://skill
 
 [Acceptance criteria](#acceptance-criteria)
 
-[Implementation and screenshots](#implementation-and-screenshots)
+## Implementation and screenshots:
+
+- [x] 1. Присутствуют десять числовых кнопок, точка и кнопки с действиями над числами:
+<img src="/readMeImages/screen01.png" width="25%">
+<br>
+<br>
+
+- [x] 2. `<AutoLayout>` настроен так, чтобы приложение работало как в портретном, так и в ландшафтном режиме **без** интерфейсных ошибок:
+<img src="/readMeImages/screen02.gif" width="33%">
+<br>
+<br>
+
+- [x] 3. Реализовано решение с двумя типами данных:
+
+Variable `<currentLabelTextNumeric>` holds `<currentLabelText>`'s value as `<Double>` and is updated each moment as `<currentLabelText>` text value is changing:
+```swift
+    var currentLabelTextNumeric: Double = 0
+    
+    private var currentLabelText: String = "" {
+        didSet {
+            guard currentLabelText != "nan",
+                  currentLabelText != "inf"
+            else {
+                turnUItoErrorMode()
+                return
+            }
+            resultLabel.text = currentLabelText
+            currentLabelTextNumeric = Double(currentLabelText) ?? 0
+        }
+    }
+```
+<br>
+
+`<Extention>` for Type `<Double>` enables to convert any `<Double>` in any code place to `<String>` and removes `<".0">` from the end of that `<String>`:
+```swift
+extension Double {
+    func cutDotZeroEnd() -> String {
+        let numberTexted = String(self)
+        guard numberTexted.hasSuffix(".0") else { return numberTexted }
+        return String(numberTexted.dropLast(2))
+    }
+}
+```
+<br>
+<br>
+
+- [x] 4. Интерфейс по собственной задумке:
+
+- [x] 5. Каждый ряд кнопок — `<StackView>` из кнопок:
+
+- [x] 6. Все элементы интерфейса помещены в `<StackView>`:
+
+- [x] 7. В калькуляторе реализовано *сложение*:
+
+- [x] 8. В калькуляторе реализовано *вычитание*:
+
+- [x] 9. В калькуляторе реализовано *деление*:
+
+- [x] 10. В калькуляторе реализовано *умножение*:
+
+- [x] 11. Помимо основных требований в калькуляторе есть и другие действия с числами (*проценты*, *корень квадратный* и тд):
 
 ## Task Description:
 
@@ -111,65 +173,3 @@ P.S.: Собственное решение помогает лучше усво
 11. Помимо основных требований в калькуляторе есть и другие действия с числами (*проценты*, *корень квадратный* и тд):
 - да — 2 балла,
 - нет — 0 баллов
-
-## Implementation and screenshots:
-
-- [x] 1. Присутствуют десять числовых кнопок, точка и кнопки с действиями над числами:
-<img src="/readMeImages/screen01.png" width="25%">
-<br>
-<br>
-
-- [x] 2. `<AutoLayout>` настроен так, чтобы приложение работало как в портретном, так и в ландшафтном режиме **без** интерфейсных ошибок:
-<img src="/readMeImages/screen02.gif" width="33%">
-<br>
-<br>
-
-- [x] 3. Реализовано решение с двумя типами данных:
-
-Variable `<currentLabelTextNumeric>` holds `<currentLabelText>`'s value as `<Double>` and is updated each moment as `<currentLabelText>` text value is changing:
-```swift
-    var currentLabelTextNumeric: Double = 0
-    
-    private var currentLabelText: String = "" {
-        didSet {
-            guard currentLabelText != "nan",
-                  currentLabelText != "inf"
-            else {
-                turnUItoErrorMode()
-                return
-            }
-            resultLabel.text = currentLabelText
-            currentLabelTextNumeric = Double(currentLabelText) ?? 0
-        }
-    }
-```
-<br>
-
-`<Extention>` for Type `<Double>` enables to convert any `<Double>` in any code place to `<String>` and removes `<".0">` from the end of that `<String>`:
-```swift
-extension Double {
-    func cutDotZeroEnd() -> String {
-        let numberTexted = String(self)
-        guard numberTexted.hasSuffix(".0") else { return numberTexted }
-        return String(numberTexted.dropLast(2))
-    }
-}
-```
-<br>
-<br>
-
-- [x] 4. Интерфейс по собственной задумке:
-
-- [x] 5. Каждый ряд кнопок — `<StackView>` из кнопок:
-
-- [x] 6. Все элементы интерфейса помещены в `<StackView>`:
-
-- [x] 7. В калькуляторе реализовано *сложение*:
-
-- [x] 8. В калькуляторе реализовано *вычитание*:
-
-- [x] 9. В калькуляторе реализовано *деление*:
-
-- [x] 10. В калькуляторе реализовано *умножение*:
-
-- [x] 11. Помимо основных требований в калькуляторе есть и другие действия с числами (*проценты*, *корень квадратный* и тд):
