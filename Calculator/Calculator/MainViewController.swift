@@ -130,8 +130,10 @@ class MainViewController: UIViewController {
         var newValue: Double
         if currentOperation == nil {
             newValue = currentLabelTextNumeric / 100
+            operandFirst = newValue
         } else {
             newValue = operandFirst / 100 * currentLabelTextNumeric
+            operandSecond = newValue
            }
         resultLabelIsEnabled = false
         currentLabelText = String(newValue)
