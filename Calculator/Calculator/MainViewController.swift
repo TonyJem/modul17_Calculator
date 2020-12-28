@@ -43,8 +43,11 @@ class MainViewController: UIViewController {
                 return
             }
             resultLabel.text = currentLabelText
+            currentLabelTextNumeric = Double(currentLabelText) ?? 0
         }
     }
+
+    var currentLabelTextNumeric: Double = 0
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
@@ -110,7 +113,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func squareRootButtonTapped(_ sender: CalcButton) {
-        let newValue = Double(currentLabelText)!.squareRoot()
+        let newValue = currentLabelTextNumeric.squareRoot()
         currentLabelText = String(newValue)
         
         guard resultLabelIsEnabled else { return }
@@ -123,9 +126,9 @@ class MainViewController: UIViewController {
     @IBAction func percentButtonTapped(_ sender: CalcButton) {
         var newValue: Double
         if currentOperation == nil {
-            newValue = Double(currentLabelText)! / 100
+            newValue = currentLabelTextNumeric / 100
         } else {
-            newValue = operandFirst / 100 * Double(currentLabelText)!
+            newValue = operandFirst / 100 * currentLabelTextNumeric
            }
         resultLabelIsEnabled = false
         currentLabelText = String(newValue)
@@ -149,11 +152,11 @@ class MainViewController: UIViewController {
         resultLabelIsEnabled = false
         
         guard currentOperation != nil else {
-            operandFirst = Double(currentLabelText)!
+            operandFirst = currentLabelTextNumeric
             currentOperation = calledOperation
             return
         }
-        operandSecond = Double(currentLabelText)!
+        operandSecond = currentLabelTextNumeric
         equalsButtonTapped(sender)
     }
     
@@ -161,7 +164,7 @@ class MainViewController: UIViewController {
         guard let calledOperation = currentOperation else { return }
         
         if resultLabelIsEnabled {
-            operandSecond = Double(currentLabelText)!
+            operandSecond = currentLabelTextNumeric
         }
         
         let calculationResult = calculate(calledOperation, for: operandFirst, with: operandSecond)
@@ -176,9 +179,9 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func plusMinusButtonTapped(_ sender: CalcButton) {
-        guard Double(currentLabelText)! != 0 else { return }
+        guard currentLabelTextNumeric != 0 else { return }
         
-        let newValue = -1 * Double(currentLabelText)!
+        let newValue = -1 * currentLabelTextNumeric
         currentLabelText = String(newValue)
         
         guard resultLabelIsEnabled else {
