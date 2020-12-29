@@ -4,7 +4,7 @@ struct Colors {
     static let applicationBackgroundColor: UIColor = .black
     
     static let labelFontColorActive: UIColor = .white
-    static let labelFontColorNotActive: UIColor = .gray
+    static let labelFontColorNotActive: UIColor = Colors.labelFontColorActive
     static let labelBackgroundColor: UIColor = Colors.applicationBackgroundColor
     
     static let buttonFontColor: UIColor = .blue
