@@ -93,6 +93,8 @@ struct Colors {
 <br>
 
 - [x] 7. В калькуляторе реализовано *сложение*:
+<img src="/readMeImages/screen07.gif" width="33%">
+
 <br>
 <br>
 
