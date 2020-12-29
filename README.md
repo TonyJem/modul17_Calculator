@@ -94,23 +94,26 @@ struct Colors {
 
 - [x] 7. В калькуляторе реализовано *сложение*:
 <img src="/readMeImages/screen07.gif" width="33%">
-
 <br>
 <br>
 
 - [x] 8. В калькуляторе реализовано *вычитание*:
+<img src="/readMeImages/screen08.gif" width="33%">
 <br>
 <br>
 
 - [x] 9. В калькуляторе реализовано *деление*:
+<img src="/readMeImages/screen09.gif" width="33%">
 <br>
 <br>
 
 - [x] 10. В калькуляторе реализовано *умножение*:
+<img src="/readMeImages/screen10.gif" width="33%">
 <br>
 <br>
 
 - [x] 11. Помимо основных требований в калькуляторе есть и другие действия с числами (*проценты*, *корень квадратный* и тд):
+<img src="/readMeImages/screen11a.gif" width="33%"> <img src="/readMeImages/screen11b.gif" width="33%">
 <br>
 <br>
 
