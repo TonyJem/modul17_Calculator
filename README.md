@@ -56,6 +56,7 @@ extension Double {
     }
 }
 ```
+<img src="/readMeImages/screen03.gif" width="33%">
 <br>
 <br>
 
